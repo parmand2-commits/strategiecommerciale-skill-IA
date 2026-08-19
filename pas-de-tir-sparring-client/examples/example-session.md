@@ -1,4 +1,4 @@
-# Exemple de session — Salle de Tir : Sparring Client
+# Exemple de session — Pas de Tir : Sparring Client
 
 > Exemple **entièrement fictif** (compte, personne, chiffres), niveau 2 « Tir réel »,
 > produit pour illustrer le déroulé. Toute ressemblance est fortuite.

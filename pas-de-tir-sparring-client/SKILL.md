@@ -1,5 +1,5 @@
 ---
-name: salle-de-tir-sparring-client
+name: pas-de-tir-sparring-client
 description: "Sparring client IA : drill hebdomadaire de roleplay où l'IA joue le client difficile sur un cas réel, avec niveaux d'imprévisibilité et curveballs d'équipement, pour entraîner les réflexes des commerciaux — ancré article « L'IA va-t-elle remplacer les commerciaux ? La leçon des Forces Spéciales »."
 version: 1.0.0
 author: Pierre (wickzzi)
@@ -10,7 +10,7 @@ metadata:
     tags: [roleplay, entrainement, sparring, drill, vente, forces-speciales, salle-darmes]
 ---
 
-# Salle de Tir — Sparring Client
+# Pas de Tir — Sparring Client
 
 ## Mission
 

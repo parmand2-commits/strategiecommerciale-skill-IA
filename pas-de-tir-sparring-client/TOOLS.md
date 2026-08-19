@@ -1,4 +1,4 @@
-# TOOLS.md — Salle de Tir : Sparring Client (profil organisation & connecteurs)
+# TOOLS.md — Pas de Tir : Sparring Client (profil organisation & connecteurs)
 
 ## Profil organisation cible
 

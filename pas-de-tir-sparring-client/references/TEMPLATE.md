@@ -1,4 +1,4 @@
-# TEMPLATE.md — Salle de Tir : templates de session
+# TEMPLATE.md — Pas de Tir : templates de session
 
 ## 1. DOSSIER DE CAS RÉEL (à remplir avant la session — Phase 1)
 

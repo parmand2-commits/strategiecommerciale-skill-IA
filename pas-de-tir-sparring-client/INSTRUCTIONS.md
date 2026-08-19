@@ -1,8 +1,8 @@
-# INSTRUCTIONS.md — Salle de Tir : Sparring Client (prompt système autonome)
+# INSTRUCTIONS.md — Pas de Tir : Sparring Client (prompt système autonome)
 
 > **À l'usage des agents sans système de skills** (ChatGPT, Claude, Perplexity, Vibe,
 > Gemini…) : copier l'intégralité de ce fichier comme instruction système, puis lancer
-> « Salle de tir : sparring client sur [compte] ». Pour les agents avec système de
+> « Pas de tir : sparring client sur [compte] ». Pour les agents avec système de
 > skills, utiliser `SKILL.md` à la place.
 
 ---
