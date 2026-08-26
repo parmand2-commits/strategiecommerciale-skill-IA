@@ -46,7 +46,8 @@ Pour chaque activité identifiée, pose la triple question de l'usage aval :
 - **Que se passe-t-il si personne ne la remplit pendant un mois ?** (« rien » = chariot)
 
 Estime avec l'utilisateur le **temps hebdo par commercial** pour chaque activité. Si un relevé de
-deux semaines est fourni, analyse-le ligne par ligne sans l'interpréter.
+deux semaines est fourni (template `references/RELEVE.md` ou tableur `releve-activite-2-semaines.xlsx`),
+analyse-le ligne par ligne sans l'interpréter.
 
 Cartographie aussi la **stack technologique** : CRM de référence, prospection, conversation
 intelligence (déployé ou non), e-mail, tableurs. Note ce qui est connecté et ce qui est fragmenté.

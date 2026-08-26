@@ -70,8 +70,9 @@ construit à l'oral, activité par activité.
 
 ### 1a. Relevé (si fourni)
 
-Pour chaque ligne du relevé (`references/RELEVE.md`), extraire : **activité, fréquence, temps
-hebdo par commercial, outil utilisé**. Ne pas interpréter : reporter les chiffres tels quels.
+Pour chaque ligne du relevé (`references/RELEVE.md` ou le tableur `references/releve-activite-2-semaines.xlsx`
+fourni dans le paquet), extraire : **activité, fréquence, temps hebdo par commercial, outil
+utilisé**. Ne pas interpréter : reporter les chiffres tels quels.
 
 ### 1b. Questions d'inventaire (si pas de relevé)
 

@@ -5,6 +5,11 @@
 > Durée recommandée : **2 semaines pleines** (l'article : « Marius savait au gramme près ce que
 > portait un homme »). Un commercial remplit ce fichier — 10 minutes par jour.
 
+> **💡 Version tableur** : une copie prête à l'emploi est fournie dans le paquet —
+> `references/releve-activite-2-semaines.xlsx` (onglet « Relevé quotidien » avec totaux
+> automatiques + onglet « Synthèse hebdo »). Elle s'ouvre dans Excel et s'importe dans
+> Google Sheets. Le présent fichier reste la version texte de référence.
+
 ---
 
 ## Consignes
