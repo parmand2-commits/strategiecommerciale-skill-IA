@@ -151,8 +151,9 @@ Rédige l'audit dans cet ordre, sans section manquante et sans section ajoutée.
 9. **Adoption** : colonnes Cas d'usage, Point de contact, Niveau de maturité (1 à 4), Propriétaire
    métier, Usage hebdo mesuré. Suivie du rappel du vallum de gouvernance des données.
 10. **Plan d'action priorisé** : colonnes Priorité, Action, Responsable, Échéance.
-11. **Registre des agents** : colonnes Nom, Version, Propriétaire, Accès (données + systèmes),
-    Niveau d'autonomie, Seconde clé, Déclencheurs, Revue, Décommissionnement, Incidents.
+11. **Registre des agents** : colonnes Nom, Version, Propriétaire, Accès, Autonomie, Seconde clé,
+    Revue, Incidents, plus les champs complémentaires (déclencheurs, données traitées, procédure
+    de décommissionnement). C'est le livrable final.
 
 ## Règles
 

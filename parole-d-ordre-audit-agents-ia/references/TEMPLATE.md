@@ -126,9 +126,12 @@ tracées · qui valide · comment sortir.
 
 <!-- Le registre vivant est le livrable final de l'audit. Une ligne par agent autorisé. -->
 
-| Nom | Version | Propriétaire | Accès (données + systèmes) | Niveau d'autonomie | Seconde clé | Déclencheurs | Revue | Décommissionnement | Incidents |
-|---|---|---|---|---|---|---|---|---|---|
-| [Nom] | [x.y] | [qui] | [données/systèmes] | [1 à 4] | [qui] | [qui] | [période] | [procédure] | [N] |
+| Nom | Version | Propriétaire | Accès | Autonomie | Seconde clé | Revue | Incidents |
+|---|---|---|---|---|---|---|---|
+| [Nom] | [x.y] | [qui] | [données/systèmes] | [1 à 4] | [qui] | [période] | [N] |
+
+Champs complémentaires du registre : déclencheurs, données traitées, procédure de
+décommissionnement.
 
 ---
 

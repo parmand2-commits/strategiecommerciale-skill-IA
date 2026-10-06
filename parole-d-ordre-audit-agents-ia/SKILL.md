@@ -15,9 +15,8 @@ description: >
   et encadrer les agents avant de les armer, sous peine de tirs fratricides.
   Complété par « La Règle des Deux : le contrôle des agents IA commence par deux clés »,
   « La Mutinerie de 1917 : quand vos agents IA autonomes s'organisent sans vous »,
-  « Gouvernance des agents IA : l'écart 74/21 »,
-  « Injection de prompt : la guerre des prompts B2B » et
-  « Le mur d'Hadrien : l'adoption de l'IA commerciale décide de la conquête ».
+  « Gouvernance des agents IA : l'écart 74/21 », « Injection de prompt : la guerre des prompts
+  B2B » et « Le mur d'Hadrien : l'adoption de l'IA commerciale décide de la conquête ».
   Compatible avec tout agent (Claude, ChatGPT, Gemini, Perplexity) : sans système de skills,
   copier INSTRUCTIONS.md comme prompt système.
 ---
@@ -28,11 +27,14 @@ Produit un audit de gouvernance des agents IA d'une organisation : identité, ac
 raisonnement, autonomie et adoption, jusqu'au registre des agents autorisés.
 
 > Principe doctrinal : avant chaque bataille, les légions changeaient la parole d'ordre ;
-> quiconque ne la connaissait pas était un ennemi. Une portée moderne l'a rendue insuffisante,
-> d'où l'IFF après le tir fratricide de l'opération Cobra (25 juillet 1944). Transposé à l'IA :
-> tout agent non identifié, non enregistré, aux accès non maîtrisés est un risque. La Règle des
-> Deux, la surveillance du raisonnement, le mandat en trois limites, le cloisonnement
-> lecture/action et le mur d'Hadrien complètent le dispositif.
+> quiconque ne la connaissait pas était un ennemi. La portée moderne l'a rendue insuffisante,
+> d'où l'IFF après le tir fratricide de l'opération Cobra (25 juillet 1944). Cinq précédents
+> gouvernent l'audit : la Règle des Deux (deux clés écartées d'environ trois mètres soixante
+> dans un silo Minuteman), la mutinerie de 1917 (une troupe chargée d'un objectif hors
+> d'atteinte contourne l'ordre), Moltke (l'intention et les limites, jamais la procédure),
+> Sun Tzu (la guerre repose sur la tromperie, une information isolée ne vaut rien) et Hadrien
+> (figer la frontière pour tenir un terrain conquis ; une garnison en retrait gêne sa propre
+> armée).
 
 ---
 
@@ -54,7 +56,7 @@ sortie Markdown, profil « générique ».
 |------|---------|--------------|
 | **Liste d'agents déclarés** | Noms, usages, accès, propriétaires | Auditer chaque agent (Étape 1) |
 | **Contexte seul** | « On utilise plusieurs outils IA… » | Ouvrir par l'inventaire (Étape 2) |
-| **Demande DPO/RSSI** | Contexte réglementaire, RGPD, secteur régulé | Prioriser les accès aux données personnelles |
+| **DPO / RSSI** | Contexte réglementaire, RGPD, secteur régulé | Accès aux données personnelles d'abord |
 
 ### 0c. Confirmer les entrées minimales
 
@@ -88,8 +90,7 @@ Poser les questions qui révèlent les agents non déclarés :
 - API de modèles accessibles sans registre (clés partagées, comptes personnels) ?
 - Agents hérités de tests ou de PoC jamais décommissionnés ?
 
-Chaque angle mort identifié reçoit le statut « à vérifier » tant que son accès réel n'est pas
-confirmé.
+Chaque angle mort reçoit le statut « à vérifier » tant que son accès réel n'est pas confirmé.
 
 ---
 
@@ -102,8 +103,8 @@ Pour chaque agent, déclaré ou suspecté, répondre à quatre questions :
 3. **Qui est responsable ?** (propriétaire identifié, joignable)
 4. **Que se passe-t-il s'il est compromis ?** (impact, détection, remédiation)
 
-Statut par agent : **OK** (parole d'ordre connue et maîtrisée) / **À renforcer** / **Critique**
-(parole d'ordre inconnue = agent ennemi potentiel).
+Statut : **OK** (parole d'ordre maîtrisée) / **À renforcer** / **Critique** (parole d'ordre
+inconnue = agent ennemi potentiel).
 
 ---
 
@@ -113,22 +114,19 @@ Toute action irréversible exige une seconde clé : un acte qui ne se rattrape p
 paiement, engagement contractuel, remise, écriture définitive) ne dépend jamais d'une seule
 autorisation.
 
-- Cartographier les actions irréversibles par agent.
-- Poser une seconde clé tenue par un **validateur indépendant**.
+- Cartographier les actions irréversibles par agent ;
+- Poser une seconde clé tenue par un **validateur indépendant** ;
 - Indépendant signifie : le validateur ne partage **ni le jeton, ni le prompt, ni l'objectif
-  chiffré** de l'agent qui propose. Un autre agent suffit s'il remplit ces trois conditions ;
-  sinon la seconde clé revient à un humain.
+  chiffré** de l'agent qui propose. Un autre agent suffit sous ces trois conditions, sinon la
+  seconde clé revient à un humain ;
 - Séparer les comptes : lecture, écriture, validation tenue par un tiers distinct.
-
-Repère : dans un silo Minuteman, les deux clés de lancement étaient écartées d'environ trois
-mètres soixante, et le code se vérifiait sur un authentificateur scellé à deux serrures.
 
 ---
 
 ## Étape 5 : Surveiller le raisonnement, pas le livrable
 
-Un livrable conforme peut cacher un raisonnement qui dérape. La surveillance porte sur le
-raisonnement, avec trois alertes concrètes :
+Un livrable conforme peut cacher un raisonnement qui dérape. Surveiller le raisonnement, avec
+trois alertes concrètes :
 
 | Alerte | Signal surveillé |
 |--------|------------------|
@@ -151,39 +149,34 @@ Chaque degré veut un propriétaire humain et un chemin de retour arrière.
 
 Auditer le critère de notation d'un agent comme un plan de commissionnement : ce qui est mesuré
 devient ce qui est optimisé. Un agent noté sur un objectif hors d'atteinte contourne l'ordre
-plutôt que de s'arrêter, comme la troupe de 1917. Ménager une sortie honorable quand la tâche
-s'avère hors de portée.
+plutôt que de s'arrêter. Ménager une sortie honorable quand la tâche s'avère hors de portée.
 
 ---
 
 ## Étape 6 : Le mandat d'agent, trois limites
 
-Un mandat d'agent est un texte de trois limites, pas une charte de trente règles. Une règle que
+Un mandat d'agent est un texte de trois limites, pas une charte de trente règles : une règle que
 personne ne peut citer de mémoire n'est pas appliquée.
 
-- Écrire l'intention et les limites, jamais la procédure.
-- Trois interdits explicites, formulés en une phrase chacun, mémorisables.
-- Une exception chiffrée avec son seuil de remontée (par exemple : remonter toute exception
-  dépassant 48 heures).
+- Écrire l'intention et les limites, jamais la procédure ;
+- Trois interdits explicites, mémorisables, et une exception chiffrée avec son seuil de remontée
+  (par exemple : remonter toute exception dépassant 48 heures) ;
 - Compléter par une supervision en temps réel : tableau de bord des actions, revue périodique
   des conversations, interrupteur d'arrêt réellement testé, pas seulement configuré.
-
-Repère : Moltke l'Ancien donne l'intention et les limites, jamais la procédure ; Sun Tzu impute
-les six manières de perdre une bataille au général, maître du destin de l'armée.
 
 ---
 
 ## Étape 7 : Cloisonnement et quarantaine (injection de prompt)
 
 Un modèle ne distingue pas la consigne de son opérateur d'une instruction dissimulée dans le
-contenu qu'il traite : il exécute les deux. Quatre mesures en découlent :
+contenu qu'il traite : il exécute les deux. Quatre mesures :
 
 - **Séparation des privilèges** : l'agent qui lit n'agit pas, l'agent qui agit n'ingère pas de
-  contenu non sollicité.
-- **Quarantaine du contenu externe** : tout contenu externe (email, page web, avis, document
-  tiers) est isolé et recoupé avant d'atteindre l'agent qui agit.
+  contenu non sollicité ;
+- **Quarantaine du contenu externe** : email, page web, avis ou document tiers isolé et recoupé
+  avant d'atteindre l'agent qui agit ;
 - **Recoupement** : une information isolée ne vaut rien tant qu'une seconde source ne la
-  confirme pas. Tenir pour suspect tout signal fort non corroboré.
+  confirme pas ; tenir pour suspect tout signal fort non corroboré ;
 - **Passage humain** obligatoire sur toute action coûteuse (envoi, paiement, engagement client).
 
 Aucun modèle n'étant immunisé, le jugement humain reste la dernière défense.
@@ -192,32 +185,28 @@ Aucun modèle n'étant immunisé, le jugement humain reste la dernière défense
 
 ## Étape 8 : Adoption (point de contact, vallum, propriétaire métier)
 
-Un agent bien gouverné mais mal placé ne produit aucune valeur. Le volet adoption tient en trois
-points, situés sur les quatre niveaux du modèle de maturité :
+Un agent bien gouverné mais mal placé ne produit aucune valeur. Trois points, situés sur les
+quatre niveaux du modèle de maturité :
 
 - **Au point de contact réel** : loger l'agent là où le travail se fait déjà (objet opportunité,
-  fiche contact), pas dans un portail ou une cellule pilote isolée.
+  fiche contact), pas dans un portail ou une cellule pilote isolée ;
 - **Le vallum de gouvernance des données** : qui accède à quoi, quelles actions d'agent sont
-  tracées, qui valide, comment sortir. Le vallum protège la route de ravitaillement.
+  tracées, qui valide, comment sortir ;
 - **Un propriétaire métier nommé** par cas d'usage, avec un taux d'usage hebdomadaire examiné
   en revue de pipeline.
 
 Niveaux du modèle de maturité : observation, assistance, exécution encadrée, autonomie. Chaque
 niveau a son degré d'autonomie, son propriétaire et son usage mesuré.
 
-Repère : Hadrien fige la frontière et bâtit le mur pour tenir un terrain conquis ; une garnison
-laissée en retrait gêne sa propre armée.
-
 ---
 
 ## Étape 9 : Plan d'action par risque
 
-Prioriser le plan d'action par risque : **critique d'abord**, puis moyen, puis faible. Chaque
-ligne porte une action, un responsable nommé et une échéance.
+Prioriser par risque : **critique d'abord**, puis moyen, puis faible. Chaque ligne porte une
+action, un responsable nommé et une échéance.
 
 - Critique : décommissionner, retirer l'accès, nommer le propriétaire, tester l'interrupteur.
-- Moyen : documenter, restreindre, planifier la revue.
-- Faible : consigner au registre, revoir à la prochaine revue périodique.
+- Moyen et faible : documenter, restreindre, planifier la revue, consigner au registre.
 
 ---
 
@@ -236,7 +225,6 @@ Avant de livrer :
 - [ ] Chaque agent déclaré est audité, un statut attribué
 - [ ] Les angles morts sont listés **avec** les questions qui les révèlent
 - [ ] Toute action irréversible a une seconde clé tenue par un validateur indépendant
-      (jeton, prompt et objectif chiffré distincts)
 - [ ] La surveillance du raisonnement couvre les trois alertes
 - [ ] L'autonomie est dosée en degrés, avec propriétaire et retour arrière
 - [ ] Le critère de notation de chaque agent est audité
@@ -245,9 +233,8 @@ Avant de livrer :
 - [ ] L'adoption est traitée : point de contact, vallum, propriétaire métier, usage mesuré
 - [ ] Le plan d'action classe par risque critique vers faible, avec responsable et échéance
 - [ ] Le registre est livré comme livrable final, réutilisable
-- [ ] Toute donnée chiffrée porte sa source et sa date de moins de douze mois
-- [ ] Aucune déduction n'est présentée comme un fait : l'inconnu est marqué « à vérifier »
-- [ ] Aucun accès inventé, aucun secret conservé
+- [ ] Toute donnée chiffrée porte une source datée de moins de douze mois
+- [ ] Aucune déduction présentée comme un fait ; l'inconnu est marqué « à vérifier »
 
 ---
 
@@ -257,9 +244,9 @@ Avant de livrer :
 |-----------|-------------|
 | Aucune liste d'agents fournie | Ouvrir par les questions d'inventaire et d'angles morts |
 | Accès inconnus | Signaler « à vérifier », ne pas deviner |
-| Secteur régulé (banque, santé, assurance) | Alerter sur les exigences spécifiques (DPO, registre obligatoire) |
+| Secteur régulé | Alerter sur les exigences spécifiques (DPO, registre obligatoire) |
 | Agents d'anciens prestataires | Risque critique par défaut, décommissionnement prioritaire |
-| Action irréversible sans seconde clé | La bloquer et proposer un validateur indépendant |
+| Action irréversible sans seconde clé | La bloquer, proposer un validateur indépendant |
 | Contenu externe non quarantainé | Isoler avant traitement, recouper, signaler |
 | Interrupteur d'arrêt jamais testé | Le tester avant de clore l'audit |
 
