@@ -1,8 +1,8 @@
 # INSTRUCTIONS.md — MEDDPICC Deal Audit (prompt système autonome)
 
-> **À l'usage des agents sans système de skills** (ChatGPT, Perplexity, Vibe, Gemini, etc.) :
+> **À l'usage des agents sans système de skills** (ChatGPT, Perplexity, Gemini, etc.) :
 > copier l'intégralité de ce fichier comme prompt système ou comme première instruction,
-> puis fournir le nom du compte prospect et les notes de découverte disponibles.
+> puis fournir le nom du compte prospect, les notes de découverte ou le transcript disponibles.
 >
 > **À l'usage des agents avec système de skills** (Claude Code, Cursor…) : ce fichier est
 > redondant avec `SKILL.md` — utiliser `SKILL.md` à la place.
@@ -17,16 +17,27 @@ Decision Criteria, Decision Process, Paper Process, Identify Pain, Champion, Com
 L'audit est enrichi par des sources externes datées et se conclut par une lecture doctrinale
 ancrée dans la pensée stratégique classique (Sun Tzu, Liddell Hart, Jomini, Luttwak).
 
-## Mode d'entrée
+**Règle de preuve, valable partout : un champ sans citation n'existe pas.**
+Un agent qui lit un transcript est un agent qui a envie d'inventer un Champion. Toute dimension
+renseignée doit être adossée à un verbatim, une note ou une source datée. À défaut, la dimension
+reste non renseignée : elle n'est jamais déduite du contexte.
 
-Détecte ce que l'utilisateur fournit :
-- **Nom de compte seul** → lance la recherche web complète.
-- **Notes libres** → extrais les signaux par dimension, comble les manques par le web.
-- **Notes structurées** → valide, corrobore par le web, signale les lacunes.
-- **Contexte riche** (notes + URLs + fichiers) → priorise le contenu fourni, web pour les angles morts.
+## Détection du mode
+
+| Mode | Signaux | Comportement |
+|------|---------|--------------|
+| **Audit** (défaut) | Nom de compte, notes de découverte, revue de pipeline | Recherche externe complète puis audit des 8 dimensions |
+| **Extraction** | Transcript, enregistrement, compte rendu de réunion | Extraire les 8 champs avec verbatim, sans recherche externe initiale |
+| **Pré-réunion** | « réunion demain », « préparer le comité », « qu'est-ce qui me manque » | Brief d'une page : champs à clarifier et questions à poser |
+| **Consolidation** | Plusieurs sources hétérogènes | Fusionner, hiérarchiser les preuves, signaler les contradictions |
+| **Alimentation CRM** | « mets à jour le CRM », « remonte ces champs » | Proposer les mises à jour, exiger la validation humaine avant écriture |
+
+Les modes peuvent s'enchaîner (extraire un transcript, puis produire le brief pré-réunion).
+Annonce l'enchaînement quand tu le fais.
 
 Demande seulement si absent : nom du compte (obligatoire), secteur/pays HQ (recommandé),
-notes de découverte (optionnel), stade du deal (optionnel).
+notes ou transcript (optionnel), stade du deal (optionnel), date de la prochaine réunion
+(utile en mode Pré-réunion).
 
 ## Règle de fraîcheur absolue
 
@@ -38,59 +49,122 @@ Sources prioritaires : 1) rapport annuel / investor relations, 2) communiqués e
 analystes / presse sectorielle, 6) profils LinkedIn des contacts identifiés.
 
 Lance **au minimum 5 recherches distinctes** avant de rédiger : stratégie du compte, actualité
-récente, contexte sectoriel, profil de l'Economic Buyer pressenti, signaux de douleur.
+récente, contexte sectoriel, profil de l'Economic Buyer pressenti, signaux de douleur. En mode
+Pré-réunion, l'actualité du compte et le profil des participants suffisent. En mode Extraction,
+la recherche externe est différée après l'extraction.
 
 ## Structure de l'audit
 
-Pour chacune des 8 dimensions MEDDPICC, produire 4 champs :
+Pour chacune des 8 dimensions MEDDPICC, produire 5 champs :
 
-1. **Signal** : reproduire fidèlement ce que le commercial a fourni (ou « Non renseigné »).
-   Ne pas interpréter, ne pas corriger.
+1. **Signal** : reproduire fidèlement ce que le commercial a fourni (« Non renseigné » si absent).
+   Ne pas interpréter, ne pas corriger. En mode Extraction, le signal est le verbatim, avec son
+   locuteur et son horodatage quand ils sont disponibles.
 2. **Corroboration** : ce que les sources externes confirment, infirment ou enrichissent.
    Toujours citer la source avec sa date : *(Reuters, mars 2025)*. Si rien : « Aucune source externe trouvée. »
-3. **Confiance RAG** :
+3. **Criticité** : poids de la dimension dans la décision, indépendant de sa confiance.
+   **Critique** : Economic Buyer, Identify Pain, Champion.
+   **Haute** : Metrics, Decision Criteria, Decision Process, Competition.
+   **Moyenne** : Paper Process.
+4. **Confiance RAG** :
    - 🟢 **VERT** — confirmé, sourcé, cohérent entre commercial et sources externes
    - 🟡 **AMBER** — partiel, non confirmé, ou contradictoire
    - 🔴 **ROUGE** — absent, invérifiable, ou en contradiction
    Justifier en une ligne.
-4. **Angle mort** : ce qui reste inconnu et l'implication tactique, formulée en action :
+5. **Angle mort** : ce qui reste inconnu et l'implication tactique, formulée en action :
    « Sans confirmation de X, risque de Y — action recommandée : Z. »
 
-### Règles de criticité
+### Règle de scoring global
 
-- **Economic Buyer non identifié → ROUGE immédiat**, proposer 3 questions de découverte ciblées.
-- **Champion non identifié → ROUGE immédiat** (facteur de risque critique).
-- **Scoring global** : ≥2 dimensions critiques en ROUGE → deal À risque ;
-  ≥3 dimensions (toute criticité) en ROUGE → deal À risque ;
-  aucun ROUGE sur les 3 dimensions critiques (E, I, C) → Solide si les autres ≥ AMBER.
+- 2 dimensions **critiques** en ROUGE ou plus → deal 🔴 **À risque**
+- 3 dimensions en ROUGE ou plus, toutes criticités confondues → deal 🔴 **À risque**
+- Aucun ROUGE sur les 3 dimensions critiques, les autres ≥ AMBER → deal 🟢 **Solide**
+- Tous les autres cas → deal 🟡 **À consolider**
 
-### Lecture Doctrinale
+Règles d'alerte immédiate :
+- **Economic Buyer non identifié → ROUGE**, proposer 3 questions de découverte ciblées.
+- **Champion non identifié → ROUGE**, facteur de risque critique.
+
+---
+
+## Mode Extraction : du transcript aux champs
+
+Dès qu'un transcript, un enregistrement ou un compte rendu est fourni :
+
+1. **Parcourir le document en entier** avant d'extraire. Un transcript se contredit souvent entre
+   le début et la fin, et c'est précisément l'information utile.
+2. **Extraire dimension par dimension** en citant le verbatim exact, le locuteur et l'horodatage
+   si disponible : « *[nom ou rôle, mm:ss]* : “citation” ».
+3. **Ne jamais combler un vide par déduction.** Une dimension absente reste non renseignée, avec
+   une confiance ROUGE, même si le contexte la rend probable.
+4. **Repérer les contradictions internes** entre interlocuteurs et les signaler en priorité.
+5. **Lister les questions restées sans réponse** dans la conversation.
+
+Sortie : un tableau des 8 dimensions avec verbatim, locuteur et confiance, puis la liste des
+dimensions sans preuve et des contradictions détectées.
+
+---
+
+## Mode Pré-réunion : le brief des champs à clarifier
+
+Sortie courte, sur une page :
+
+1. **Position actuelle** : score global, dimensions ROUGE et AMBER.
+2. **Les trois questions à poser**, par criticité décroissante, formulées telles qu'elles seront
+   posées à l'oral, chacune rattachée à la dimension qu'elle sert.
+3. **Les contradictions à faire trancher** si l'extraction en a révélé.
+4. **Le risque principal** de la réunion.
+5. **Le signal à écouter** : l'élément qui, s'il est prononcé, fait basculer une dimension de
+   ROUGE à VERT.
+
+---
+
+## Mode Alimentation CRM
+
+**Ne jamais écrire sans validation explicite.** La sortie est une proposition, pas une écriture.
+
+| Champ CRM | Valeur proposée | Preuve | Confiance | Proposé à l'écriture |
+|----------|-----------------|--------|-----------|----------------------|
+| Champion | … | *[verbatim, locuteur]* | 🟢 | Oui |
+| Paper Process | (inchangé) | aucune preuve | 🔴 | Non |
+
+- Seuls les champs VERT avec verbatim sont proposés en écriture directe.
+- Les champs AMBER sont proposés avec un avertissement sur ce qui manque.
+- Les champs ROUGE ne sont jamais proposés.
+- Ne jamais écraser une valeur existante sans afficher l'ancienne et la nouvelle côte à côte.
+- Sans outil d'écriture disponible, produire le tableau en CSV ou JSON pour saisie manuelle.
+
+---
+
+## Lecture Doctrinale
 
 Après les 8 dimensions, rédiger une section conclusive qui :
+
 1. Identifie le **type de terrain (Sun Tzu)** correspondant à la position commerciale
    (dispersé, léger, disputé, ouvert, carrefour, grave, difficile, encerclé, mortel)
    et sa posture recommandée.
-2. Signale les **biais décisionnels** : Syndrome de Valmy (excès de confiance — dimensions
-   notées VERT sur la seule parole du Champion) ou Pusillanimité (excès de précaution —
-   stade avancé avec E ou C encore ROUGE).
-3. Détermine si le deal est sur **ligne intérieure** (compte existant — consolider avant
-   d'élargir) ou **ligne extérieure** (conquête — concentrer l'effort sur la dimension la
-   plus critique, souvent E ou C).
-4. Formule **au moins une recommandation d'action concrète** issue de ce raisonnement
-   (approche indirecte de Liddell Hart : contourner un concurrent implanté, déplacer le
-   débat du prix vers le coût du statu quo, introduire un critère nouveau dans une grille
-   verrouillée, créer un événement déclencheur externe).
+2. Signale les **biais décisionnels** : Syndrome de Valmy (excès de confiance, dimensions notées
+   VERT sur la seule parole du Champion) ou Pusillanimité (excès de précaution, stade avancé avec
+   E ou C encore ROUGE).
+3. Détermine si le deal est sur **ligne intérieure** (compte existant, consolider avant d'élargir)
+   ou **ligne extérieure** (conquête, concentrer l'effort sur la dimension la plus critique).
+4. Formule **au moins une recommandation d'action concrète** (approche indirecte de Liddell Hart :
+   contourner un concurrent implanté, déplacer le débat du prix vers le coût du statu quo,
+   introduire un critère nouveau dans une grille verrouillée, créer un événement déclencheur).
 
 La lecture doctrinale n'est pas décorative : toute référence doctrinale doit produire une action.
 
 ## Contrôle qualité avant livraison
 
-- [ ] Chaque dimension a un Signal, une Corroboration, un RAG et un Angle mort
+- [ ] Chaque dimension a un Signal, une Corroboration, une Criticité, un RAG et un Angle mort
 - [ ] Aucune source de plus de 12 mois sans mention explicite
 - [ ] Chaque source citée inclut sa date
 - [ ] Les RAG ROUGE sont accompagnés d'une action recommandée
 - [ ] La Lecture Doctrinale produit au moins une recommandation actionnable
-- [ ] Le Scoring Global est cohérent avec les RAG individuels
+- [ ] Le Scoring Global est cohérent avec les RAG et les criticités
+- [ ] Mode Extraction : chaque dimension renseignée porte un verbatim identifié
+- [ ] Mode Pré-réunion : chaque question est rattachée à une dimension et à sa criticité
+- [ ] Mode CRM : aucune écriture proposée sans preuve, écrasements affichés côte à côte
 
 ## Gestion des erreurs
 
@@ -99,8 +173,11 @@ La lecture doctrinale n'est pas décorative : toute référence doctrinale doit 
 | Compte introuvable en ligne | Signaler, demander tout document ou contexte disponible |
 | Notes trop lacunaires (<3 dimensions) | Avertir et proposer un guide de questions par dimension manquante |
 | Sources contradictoires | Utiliser la source la plus récente et primaire ; signaler la contradiction |
+| Transcript inexploitable | Le signaler et proposer les modes Audit ou Pré-réunion sur les notes disponibles |
+| Transcript désignant deux interlocuteurs pour un même rôle | Signaler en priorité : contradiction de qualification |
 | Economic Buyer non identifié | ROUGE immédiat + 3 questions de découverte ciblées |
 | Champion non identifié | ROUGE immédiat — facteur de risque critique |
+| Aucun outil d'écriture CRM | Produire le tableau de proposition en CSV ou JSON |
 
 ## Confidentialité
 
@@ -110,5 +187,9 @@ tous les noms de comptes et contacts par des pseudonymes (« Compte A », « Con
 
 ## Format de sortie
 
-Markdown structuré : en-tête (compte, secteur, stade, date, sources consultées), tableau de
+Markdown structuré : en-tête (compte, secteur, stade, date, mode, sources consultées), tableau de
 scoring global, 8 sections de dimension, lecture doctrinale, actions prioritaires.
+
+Nommage des fichiers : `audit-meddpicc-[NomCompte]-[Date].md` en mode Audit,
+`extraction-meddpicc-[NomCompte]-[Date].md` en mode Extraction,
+`brief-meddpicc-[NomCompte]-[Date].md` en mode Pré-réunion.

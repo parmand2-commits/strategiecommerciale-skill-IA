@@ -104,7 +104,7 @@ procurement, sécurité).
 #   - participants_identifies
 ```
 
-### Sales Enablement (exemple : Highspot)
+### Sales Enablement (exemple : plateforme de sales enablement)
 
 Récupère les contenus partagés avec le prospect et les signaux d'engagement.
 Utile pour mesurer l'implication du Champion (a-t-il partagé le contenu en interne ?)
@@ -113,14 +113,42 @@ et la maturité des Decision Criteria (a-t-il demandé des études de cas spéci
 ```yaml
 # tool: sales_enablement
 # enabled: false
-# mcp_server_url: https://mcp.highspot.com/mcp
+# mcp_server_url: https://votre-instance.mcp-enablement.example.com
 # description: >
-#   Accès en lecture à Highspot. Permet de récupérer les contenus partagés avec le prospect,
-#   les vues et partages internes (signal d'engagement du Champion), et les pitches envoyés.
+#   Accès en lecture à une plateforme d'activation commerciale. Permet de récupérer les
+#   contenus partagés avec le prospect, les vues et partages internes (signal d'engagement
+#   du Champion), et les pitches envoyés.
 # data_available:
 #   - contenus_partages
 #   - engagements_prospect
 #   - pitches_envoyes
+```
+
+### Écriture CRM (optionnel — désactivé par défaut)
+
+Récupère les champs MEDDPICC existants d'une opportunité et permet d'y proposer des mises à
+jour qualifiées. **Ce connecteur est désactivé par défaut, et le reste tant que l'utilisateur
+ne l'active pas explicitement.**
+
+Règles à respecter par l'agent si ce connecteur est actif :
+1. Ne jamais écrire sans validation explicite de l'utilisateur sur la proposition affichée.
+2. N'écrire que les champs dont la confiance est VERT et dont la preuve est un verbatim identifié.
+3. Afficher l'ancienne et la nouvelle valeur côte à côte avant tout écrasement.
+4. Ne jamais écrire un champ en ROUGE.
+
+```yaml
+# tool: crm_write
+# enabled: false            # laisser à false pour un usage en lecture seule
+# require_human_validation: true   # ne jamais passer à false
+# mcp_server_url: https://votre-instance.mcp-crm.example.com
+# description: >
+#   Accès en écriture aux champs de qualification d'une opportunité. Sert uniquement à
+#   proposer et appliquer des mises à jour de champs MEDDPICC après validation humaine.
+# writable_fields:
+#   - champion
+#   - economic_buyer
+#   - identify_pain
+#   - metrics
 ```
 
 ---

@@ -1,4 +1,4 @@
-# TEMPLATE.md — Audit MEDDPICC : Exemple SARL (fictif)
+# Audit MEDDPICC : Exemple SARL (fictif)
 
 > **Note** : Ce document est un **exemple de sortie complète** (golden file). Il illustre le
 > niveau de qualité attendu : chaque dimension renseignée, sources datées, RAG justifiés,
@@ -12,6 +12,7 @@
 **Compte :** Exemple SARL (fictif)
 **Secteur :** Services informatiques | France
 **Stade du deal :** Validation
+**Mode d'exécution :** Audit
 **Date de l'audit :** 12/08/2026
 **Analyste :** Généré par MEDDPICC Skill
 **Sources externes consultées :** 7 sources web
