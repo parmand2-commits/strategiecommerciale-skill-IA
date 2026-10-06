@@ -1,4 +1,4 @@
-# TOOLS.md — Pas de Tir : Sparring Client (profil organisation & connecteurs)
+# TOOLS.md · Pas de Tir : Sparring Client (profil organisation & connecteurs)
 
 ## Profil organisation cible
 
@@ -26,9 +26,9 @@
 
 | Niveau | Source | Usage |
 |---|---|---|
-| 0 — défaut | fiche de 10 lignes (les 5 verrous) | fonctionne sans rien d'autre — 90 % des cas |
+| 0 · défaut | fiche de 10 lignes (les 5 verrous) | fonctionne sans rien d'autre : 90 % des cas |
 | 1 | export CRM brut (copier-coller) | la skill sait lire le désordre : historique, étapes, notes |
-| 2 | intelligence conversationnelle (Gong, Chorus, Highspot — catégorie plateforme) | objections réellement prononcées sur 90 jours |
+| 2 | intelligence conversationnelle (Gong, Chorus, Highspot : catégorie plateforme) | objections réellement prononcées sur 90 jours |
 
 Le mode dégradé (niveau 0) est pleinement fonctionnel : les 5 verrous
 (compte réel, dernière phrase prononcée, statut du deal, inquiétude, non-dit)

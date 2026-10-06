@@ -1,4 +1,4 @@
-# TEMPLATE.md — Audit MEDDPICC : [NomCompte]
+# TEMPLATE.md · Audit MEDDPICC : [NomCompte]
 
 > **Note pour l'agent** : Ce fichier est le template de sortie. Remplir chaque champ annoté
 > avec les informations collectées. Supprimer les annotations `[...]` dans le livrable final.
@@ -23,14 +23,14 @@
 
 | Dimension | Confiance | Criticité |
 |-----------|-----------|-----------|
-| M — Metrics | 🟢 / 🟡 / 🔴 | Haute |
-| E — Economic Buyer | 🟢 / 🟡 / 🔴 | Critique |
-| D — Decision Criteria | 🟢 / 🟡 / 🔴 | Haute |
-| D — Decision Process | 🟢 / 🟡 / 🔴 | Haute |
-| P — Paper Process | 🟢 / 🟡 / 🔴 | Moyenne |
-| I — Identify Pain | 🟢 / 🟡 / 🔴 | Critique |
-| C — Champion | 🟢 / 🟡 / 🔴 | Critique |
-| C — Competition | 🟢 / 🟡 / 🔴 | Haute |
+| M · Metrics | 🟢 / 🟡 / 🔴 | Haute |
+| E · Economic Buyer | 🟢 / 🟡 / 🔴 | Critique |
+| D · Decision Criteria | 🟢 / 🟡 / 🔴 | Haute |
+| D · Decision Process | 🟢 / 🟡 / 🔴 | Haute |
+| P · Paper Process | 🟢 / 🟡 / 🔴 | Moyenne |
+| I · Identify Pain | 🟢 / 🟡 / 🔴 | Critique |
+| C · Champion | 🟢 / 🟡 / 🔴 | Critique |
+| C · Competition | 🟢 / 🟡 / 🔴 | Haute |
 
 **Score global du deal :** 🟢 Solide | 🟡 À consolider | 🔴 À risque
 
@@ -40,7 +40,7 @@
 
 ---
 
-## M — Metrics
+## M · Metrics
 *Valeur quantifiée que le prospect cherche à atteindre. C'est la justification économique du projet.*
 
 **Signal commercial :**
@@ -53,17 +53,17 @@ Ex : "Le rapport annuel 2024 mentionne un objectif de croissance du CA de 12 % a
 explicite sur l'efficacité commerciale (Rapport Annuel [NomCompte], mars 2025)."]
 
 **Confiance :** 🟢 / 🟡 / 🔴
-[Justification en une ligne. Ex : "AMBER — objectif de croissance confirmé mais baseline
+[Justification en une ligne. Ex : "AMBER : objectif de croissance confirmé mais baseline
 opérationnelle inconnue, rendant le calcul de ROI fragile."]
 
 **Angle mort :**
 [Ce qui reste inconnu et l'implication tactique. Ex : "Sans baseline de conversion actuelle,
-le ROI ne peut pas être chiffré rigoureusement — risque de blocage lors de la validation CFO.
+le ROI ne peut pas être chiffré rigoureusement, risque de blocage lors de la validation CFO.
 Action : obtenir les données de performance actuelles lors du prochain appel."]
 
 ---
 
-## E — Economic Buyer
+## E · Economic Buyer
 *Le décideur budgétaire ultime. Celui qui peut dire oui indépendamment de toute autre approbation.*
 
 **Signal commercial :**
@@ -74,10 +74,10 @@ Action : obtenir les données de performance actuelles lors du prochain appel."]
 [Rechercher le profil LinkedIn du CFO/CRO/CEO pressenti, sa durée en poste, ses prises de parole
 publiques sur les priorités d'investissement. Ex : "Le CFO [Prénom Nom] est en poste depuis 2023
 (LinkedIn, consulté juin 2026). Dans une interview aux Échos (jan. 2025), il mentionne une
-priorité de « réduction des coûts d'acquisition client » — alignement possible avec notre valeur."]
+priorité de « réduction des coûts d'acquisition client » : alignement possible avec notre valeur."]
 
 **Confiance :** 🟢 / 🟡 / 🔴
-[Ex : "ROUGE — L'Economic Buyer n'a pas encore été rencontré. Deal sans sponsor budgétaire validé."]
+[Ex : "ROUGE : L'Economic Buyer n'a pas encore été rencontré. Deal sans sponsor budgétaire validé."]
 
 **Angle mort :**
 [Ex : "Le CFO n'est pas engagé. Sans réunion avec lui avant la phase de négociation, risque de
@@ -86,7 +86,7 @@ le CFO d'ici 3 semaines."]
 
 ---
 
-## D — Decision Criteria
+## D · Decision Criteria
 *Les critères formels et informels sur lesquels le prospect évaluera les solutions en compétition.*
 
 **Signal commercial :**
@@ -100,7 +100,7 @@ Ex : "3 avis G2 récents de clients du même secteur mentionnent l'intégration 
 comme critère éliminatoire (G2.com, 2025)."]
 
 **Confiance :** 🟢 / 🟡 / 🔴
-[Ex : "AMBER — Critères formels connus mais critères informels (préférences politiques internes,
+[Ex : "AMBER : Critères formels connus mais critères informels (préférences politiques internes,
 contraintes legacy) non identifiés."]
 
 **Angle mort :**
@@ -109,7 +109,7 @@ Action : organiser un appel technique avec le RSSI avant la démonstration."]
 
 ---
 
-## D — Decision Process
+## D · Decision Process
 *Le processus interne de prise de décision : qui valide, dans quel ordre, avec quels jalons.*
 
 **Signal commercial :**
@@ -120,10 +120,10 @@ de direction. Timeline estimée : 6 semaines. Pas de mention du rôle des achats
 [Rechercher la structure organisationnelle publique, les offres d'emploi en procurement/IT,
 les informations sur la gouvernance IT dans les rapports annuels ou interviews.
 Ex : "L'organigramme LinkedIn révèle une équipe achats de 8 personnes et un DSI groupe
-distinct du DSI France — deux niveaux de validation possibles (LinkedIn, juin 2026)."]
+distinct du DSI France : deux niveaux de validation possibles (LinkedIn, juin 2026)."]
 
 **Confiance :** 🟢 / 🟡 / 🔴
-[Ex : "AMBER — Process décrit par le Champion mais non confirmé formellement. Risque de surprises
+[Ex : "AMBER : Process décrit par le Champion mais non confirmé formellement. Risque de surprises
 à l'étape de validation groupe."]
 
 **Angle mort :**
@@ -133,7 +133,7 @@ groupe."]
 
 ---
 
-## P — Paper Process
+## P · Paper Process
 *Le processus contractuel et administratif : legal, procurement, sécurité, compliance.*
 
 **Signal commercial :**
@@ -143,12 +143,12 @@ Pas d'information sur les exigences de sécurité ou compliance."]
 **Corroboration externe :**
 [Rechercher les politiques d'achat ou de compliance publiées, les certifications exigées
 (ISO 27001, SOC2, RGPD, secteur régulé), les avis clients mentionnant des délais de
-contractualisation longs. Ex : "L'entreprise est cotée en bourse — les contrats >100k€
+contractualisation longs. Ex : "L'entreprise est cotée en bourse : les contrats >100k€
 nécessitent probablement une validation conseil d'administration selon les statuts publics
 (AMF, rapport gouvernance 2024)."]
 
 **Confiance :** 🟢 / 🟡 / 🔴
-[Ex : "AMBER — Délai legal annoncé mais exigences de sécurité et niveau de contractualisation
+[Ex : "AMBER : Délai legal annoncé mais exigences de sécurité et niveau de contractualisation
 groupe non clarifiés."]
 
 **Angle mort :**
@@ -158,7 +158,7 @@ le questionnaire sécurité dès maintenant, ne pas attendre la phase de négoci
 
 ---
 
-## I — Identify Pain
+## I · Identify Pain
 *La douleur critique qui rend le statu quo intenable. La raison pour laquelle ils doivent agir.*
 
 **Signal commercial :**
@@ -169,12 +169,12 @@ d'un onboarding qui prend 6 mois. Pas de chiffrage financier de l'impact."]
 [Rechercher des signaux publics de la douleur : recrutements massifs en sales (turnover ?),
 avis Glassdoor sur les conditions commerciales, mentions dans des interviews d'une priorité
 liée au problème, couverture de la presse sur des difficultés sectorielles.
-Ex : "12 offres d'emploi de commerciaux ouvertes simultanément sur LinkedIn (juin 2026) —
+Ex : "12 offres d'emploi de commerciaux ouvertes simultanément sur LinkedIn (juin 2026) :
 signal fort de turnover ou d'expansion rapide. Le PDG dans une interview CB News (fév. 2025)
 évoque 'la nécessité de scaler l'équipe commerciale sans perdre en qualité'."]
 
 **Confiance :** 🟢 / 🟡 / 🔴
-[Ex : "VERT — Douleur confirmée par le commercial ET corroborée par des signaux publics
+[Ex : "VERT : Douleur confirmée par le commercial ET corroborée par des signaux publics
 indépendants. Impact financier à quantifier."]
 
 **Angle mort :**
@@ -184,7 +184,7 @@ lors du prochain appel (coût de remplacement = 150 % du salaire annuel selon Ga
 
 ---
 
-## C — Champion
+## C · Champion
 *L'allié interne qui veut que vous gagniez, a accès à l'Economic Buyer, et peut influencer la décision.*
 
 **Signal commercial :**
@@ -195,21 +195,21 @@ du contenu en interne, mais son niveau d'influence sur le CFO est inconnu."]
 [Rechercher le profil LinkedIn du Champion : ancienneté dans l'entreprise, réseau avec le
 comité de direction, prises de parole publiques, implication dans des décisions antérieures.
 Ex : "Le Responsable Sales Ops [Nom] est en poste depuis 4 ans (LinkedIn, juin 2026).
-Il a publié un article sur LinkedIn en mars 2025 sur 'l'optimisation du stack commercial'
-— alignement idéologique avec notre proposition."]
+Il a publié un article sur LinkedIn en mars 2025 sur 'l'optimisation du stack commercial' :
+alignement idéologique avec notre proposition."]
 
 **Confiance :** 🟢 / 🟡 / 🔴
-[Ex : "AMBER — Champion identifié et engagé mais accès à l'Economic Buyer non confirmé.
+[Ex : "AMBER : Champion identifié et engagé mais accès à l'Economic Buyer non confirmé.
 Risque de Champion sans pouvoir réel."]
 
 **Angle mort :**
 [Ex : "Un Champion sans accès direct au CFO est un relais, pas un sponsor. Action : tester
-son influence en lui demandant d'organiser une réunion stratégique avec le CFO — si il
+son influence en lui demandant d'organiser une réunion stratégique avec le CFO : s'il
 ne peut pas, escalader la stratégie de sponsorship."]
 
 ---
 
-## C — Competition
+## C · Competition
 *Les alternatives évaluées par le prospect : concurrents directs, solutions internes, statu quo.*
 
 **Signal commercial :**
@@ -221,10 +221,10 @@ et une option de développement interne. Pas de détail sur le stade d'évaluati
 ou d'intégration existants entre le prospect et des concurrents, des offres d'emploi
 mentionnant des outils concurrents, des commentaires d'anciens employés sur Glassdoor.
 Ex : "Un ancien commercial de [NomCompte] mentionne '[Concurrent]' dans son profil LinkedIn
-comme outil quotidien (LinkedIn, 2025) — signal d'un usage ou d'une intégration existante."]
+comme outil quotidien (LinkedIn, 2025) : signal d'un usage ou d'une intégration existante."]
 
 **Confiance :** 🟢 / 🟡 / 🔴
-[Ex : "AMBER — Concurrents identifiés mais stade de leur évaluation et critères de différenciation
+[Ex : "AMBER : Concurrents identifiés mais stade de leur évaluation et critères de différenciation
 du prospect inconnus."]
 
 **Angle mort :**
@@ -234,26 +234,74 @@ avec ce concurrent existe déjà avant la prochaine démonstration."]
 
 ---
 
-## Lecture Doctrinale
-*Traduction de l'état du deal dans le vocabulaire stratégique classique. Lire `references/DOCTRINE.md` avant de rédiger cette section.*
+## Carte des profondeurs du comité
+*À remplir uniquement en mode Profondeurs du comité. Trois interlocuteurs nommés, un par
+profondeur, chacun daté.*
 
-**Type de terrain (Sun Tzu — Neuf Terrains) :**
+| Profondeur | Interlocuteur (nom, rôle) | Enjeu | Date du premier échange | Pièces fournies / attendues | État |
+|-----------|---------------------------|-------|-------------------------|-----------------------------|------|
+| **Tactique** | [Ex : nom, utilisateur ou chef de projet] | usage et mise en œuvre | [JJ/MM/AAAA] | [démo, POC, documentation] | 🟢 / 🟡 / 🔴 |
+| **Opérative** | [Ex : nom, RSSI, acheteur, juriste, DSI] | conformité et conditions | [JJ/MM/AAAA] | [questionnaire sécurité, clauses, RFP] | 🟢 / 🟡 / 🔴 |
+| **Stratégique** | [Ex : nom, dirigeant ou Economic Buyer] | décision et budget | [JJ/MM/AAAA] | [document citable, business case] | 🟢 / 🟡 / 🔴 |
+
+**Conditions de largage du dirigeant :** [Cocher les trois avant d'introduire le dirigeant.]
+- [ ] Un champion entraîné, qui porte le dossier sans le vendeur
+- [ ] Une profondeur tactique validée (utilisateurs et chef de projet acquis)
+- [ ] Un document citable prêt (business case chiffré, note de synthèse, référence comparable)
+
+**Alerte :** [Un dossier resté mono-profondeur signale un veto qui travaille en silence.]
+
+---
+
+## Plan de compte et radar MEDDPICC (compte à fortifier)
+*À remplir uniquement en mode Compte à fortifier. Le compte existant est traité comme une
+position à fortifier, non comme une opportunité nouvelle.*
+
+**Plan de compte :**
+
+| Compte | Position tenue (usage, part, référence) | Forces en place (champions actifs) | Risques de friction | Plan de fortification 90 jours |
+|--------|------------------------------------------|------------------------------------|---------------------|--------------------------------|
+| [NomCompte] | [Ex : 30 licences actives, 3 services en production] | [Ex : RSSI et chef de projet alliés] | [Ex : maintenance, dette technique, réorg, concurrent] | [Ex : actions datées J+30, J+60, J+90] |
+
+**Radar des dimensions sur le compte existant :**
+
+| Dimension | État sur le compte | Preuve (verbatim ou source datée) | Angle mort | Action de fortification |
+|-----------|--------------------|-----------------------------------|------------|-------------------------|
+| M · Metrics | 🟢 / 🟡 / 🔴 | [preuve] | [risque] | [action] |
+| E · Economic Buyer | 🟢 / 🟡 / 🔴 | [preuve] | [risque] | [action] |
+| D · Decision Criteria | 🟢 / 🟡 / 🔴 | [preuve] | [risque] | [action] |
+| D · Decision Process | 🟢 / 🟡 / 🔴 | [preuve] | [risque] | [action] |
+| P · Paper Process | 🟢 / 🟡 / 🔴 | [preuve] | [risque] | [action] |
+| I · Identify Pain | 🟢 / 🟡 / 🔴 | [preuve] | [risque] | [action] |
+| C · Champion | 🟢 / 🟡 / 🔴 | [preuve] | [risque] | [action] |
+| C · Competition | 🟢 / 🟡 / 🔴 | [preuve] | [risque] | [action] |
+
+**Alerte :** [Sur un compte existant, E, I et C devraient être VERT ; sinon, compte à risque de
+churn ou de chasse par un concurrent, et l'alerte prime sur toute action d'expansion.]
+
+---
+
+## Lecture Doctrinale
+*Traduction de l'état du deal dans le vocabulaire stratégique classique.
+Lire `references/DOCTRINE.md` avant de rédiger cette section.*
+
+**Type de terrain (Sun Tzu, Neuf Terrains) :**
 [Identifier le terrain correspondant à la position commerciale actuelle et ses implications.
-Ex : "Terrain disputé — le prospect est activement sollicité par au moins deux concurrents.
+Ex : "Terrain disputé : le prospect est activement sollicité par au moins deux concurrents.
 Sur un terrain disputé, Sun Tzu recommande de ne pas s'attarder mais de forcer rapidement
 la décision. Implication : raccourcir le cycle en obtenant un engagement de l'Economic Buyer
 avant la prochaine revue de budget."]
 
 **Risques de biais stratégiques :**
 [Identifier les biais potentiels du commercial ou du management sur ce deal.
-Ex : "Risque de Syndrome de Valmy — l'enthousiasme du Champion peut induire une sur-confiance
+Ex : "Risque de Syndrome de Valmy : l'enthousiasme du Champion peut induire une sur-confiance
 dans la qualification. Le deal affiche 3 dimensions en AMBER ; la posture doit rester
 offensive mais rigoureuse, pas triomphante."]
 
 **Ligne intérieure ou extérieure :**
 [Indiquer si c'est un compte existant (ligne intérieure = avantage défensif à exploiter)
 ou une conquête (ligne extérieure = nécessite une concentration de force et une fenêtre d'entrée).
-Ex : "Ligne extérieure — conquête pure. Aucun historique de relation. L'approche indirecte
+Ex : "Ligne extérieure : conquête pure. Aucun historique de relation. L'approche indirecte
 (Liddell Hart) recommande d'éviter l'affrontement frontal sur le prix et de concentrer
 l'effort sur la création d'une asymétrie informationnelle : nous devons en savoir plus sur
 leur situation que nos concurrents."]
@@ -265,6 +313,7 @@ leur situation que nos concurrents."]
 
 ---
 
-*Audit généré par le MEDDPICC Deal Audit Skill — strategiecommerciale.eu*
+*Audit généré par le MEDDPICC Deal Audit Skill · strategiecommerciale.eu*
 *Informations sourced de sources publiques datées de moins de 12 mois sauf mention contraire.*
-*Si `anonymize: true` est déclaré dans TOOLS.md, remplacer tous les noms de comptes et contacts par des pseudonymes (ex : « Compte A », « Contact B »).*
+*Si `anonymize: true` est déclaré dans TOOLS.md, remplacer tous les noms de comptes et contacts
+par des pseudonymes (ex : « Compte A », « Contact B »).*

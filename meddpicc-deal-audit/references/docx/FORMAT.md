@@ -1,4 +1,4 @@
-# FORMAT.md — Génération du document .docx
+# FORMAT.md : Génération du document .docx
 
 > Fichier de référence pour le mode `output_format: document`.
 > Ce fichier est lu uniquement lorsque ce mode est déclaré dans `TOOLS.md`.
@@ -12,7 +12,7 @@ Le livrable `.docx` doit respecter la charte du site (fond clair, accents cuivre
 | Fond de page | blanc pur `#FFFFFF` |
 | Texte courant | encre `#0C1B2E` |
 | Accents, filets, titres | cuivre `#C98A4B` |
-| En-tête | « Audit MEDDPICC — [NomCompte] — [Date] » |
+| En-tête | « Audit MEDDPICC · [NomCompte] · [Date] » |
 | Scoring RAG | pastilles vert / amber / rouge, texte de justification en encre |
 | Polices | sans-serif sobre (Calibri ou équivalent), titres en gras cuivre |
 
@@ -30,7 +30,7 @@ titres, les filets et les encadrés.
 4. **Section de mode** si applicable : tableau d'extraction avec verbatim et locuteur, brief
    pré-réunion, ou proposition de mise à jour CRM.
 5. **Lecture Doctrinale** : terrain, biais, ligne, recommandations en encadré cuivre.
-6. **Footer** : « Audit généré par le MEDDPICC Deal Audit Skill — strategiecommerciale.eu ».
+6. **Footer** : « Audit généré par le MEDDPICC Deal Audit Skill · strategiecommerciale.eu ».
 
 ## Génération
 

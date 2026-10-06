@@ -1,4 +1,4 @@
-# TOOLS.md — Manifeste d'outillage MEDDPICC
+# TOOLS.md : Manifeste d'outillage MEDDPICC
 
 Ce fichier déclare les outils disponibles pour enrichir l'audit MEDDPICC.
 **Modifiez ce fichier** pour activer vos propres connexions MCP ou ajuster les préférences de sortie.
@@ -40,7 +40,7 @@ priority: 1
 
 ---
 
-## Outils optionnels — Décommentez et configurez selon votre stack
+## Outils optionnels : Décommentez et configurez selon votre stack
 
 ### CRM (exemple : Salesforce, HubSpot, Dynamics)
 
@@ -124,7 +124,7 @@ et la maturité des Decision Criteria (a-t-il demandé des études de cas spéci
 #   - pitches_envoyes
 ```
 
-### Écriture CRM (optionnel — désactivé par défaut)
+### Écriture CRM (optionnel, désactivé par défaut)
 
 Récupère les champs MEDDPICC existants d'une opportunité et permet d'y proposer des mises à
 jour qualifiées. **Ce connecteur est désactivé par défaut, et le reste tant que l'utilisateur
@@ -188,7 +188,7 @@ Pour déclarer un nouvel outil MCP, copier ce bloc et le remplir :
 
 ## Sécurité & limites (à préserver dans toute exécution)
 
-Cette skill est un **dossier d'instructions en texte pur** — elle ne contient et ne doit
+Cette skill est un **dossier d'instructions en texte pur** : elle ne contient et ne doit
 jamais contenir de fichier exécutable, de script binaire ou de code à compiler.
 
 Pendant l'exécution, l'agent respecte ces limites strictes :

@@ -1,4 +1,4 @@
-# DOCTRINE.md — Grille de Lecture Doctrinale
+# DOCTRINE.md : Grille de Lecture Doctrinale
 
 Ce fichier fournit les clés d'interprétation pour la section **Lecture Doctrinale** de l'audit.
 Il est lu uniquement lors de la rédaction de cette section finale.
@@ -9,15 +9,15 @@ d'action concrète** que l'analyse MEDDPICC seule ne formulerait pas.
 
 ---
 
-## 1. Les Neuf Terrains de Sun Tzu — Cartographie de la position commerciale
+## 1. Les Neuf Terrains de Sun Tzu : Cartographie de la position commerciale
 
 Sun Tzu identifie neuf types de terrain selon la profondeur de la pénétration en territoire ennemi.
 Appliqués au B2B, ils définissent la posture stratégique à adopter.
 
 | Terrain | Situation commerciale | Posture recommandée |
 |---------|----------------------|---------------------|
-| **Terrain dispersé** | Prospect dans son propre secteur de confort, peu de pression | Ne pas s'engager encore — attendre un signal de douleur plus fort |
-| **Terrain léger** | Premier contact, qualification superficielle | Ne pas s'attarder — avancer rapidement ou décrocher |
+| **Terrain dispersé** | Prospect dans son propre secteur de confort, peu de pression | Ne pas s'engager encore : attendre un signal de douleur plus fort |
+| **Terrain léger** | Premier contact, qualification superficielle | Ne pas s'attarder : avancer rapidement ou décrocher |
 | **Terrain disputé** | Prospect activement évalué par des concurrents | Forcer la décision rapidement ; terrain à prendre ou à abandonner |
 | **Terrain ouvert** | Accès libre, pas de position dominante des deux côtés | Construire l'asymétrie informationnelle ; se différencier avant la confrontation |
 | **Terrain de carrefour** | Accord stratégique à fort enjeu, plusieurs parties influentes | Chercher des alliances (partenaires, intégrateurs, analystes) pour créer un réseau de pression |
@@ -27,11 +27,12 @@ Appliqués au B2B, ils définissent la posture stratégique à adopter.
 | **Terrain mortel** | Décision imminente, risque total de perte | Agir avec une urgence maximale ; le statu quo est la défaite |
 
 **Utilisation dans l'audit :** identifier le terrain dominant et en déduire la posture.
-Un deal avec un Economic Buyer non engagé sur un terrain disputé = terrain mortel déguisé en terrain grave.
+Un deal avec un Economic Buyer non engagé sur un terrain disputé = terrain mortel déguisé en
+terrain grave.
 
 ---
 
-## 2. La Logique Paradoxale de Luttwak — Quand le mouvement attendu devient un piège
+## 2. La Logique Paradoxale de Luttwak : Quand le mouvement attendu devient un piège
 
 Luttwak démontre que le succès répété d'une stratégie la rend prévisible, donc inefficace.
 En stratégie commerciale, cela se traduit ainsi : si tous vos concurrents suivent le même
@@ -52,7 +53,7 @@ Le paradoxe de Luttwak s'applique : la clarté du terrain est un piège.
 
 ---
 
-## 3. L'Approche Indirecte de Liddell Hart — Éviter la confrontation frontale
+## 3. L'Approche Indirecte de Liddell Hart : Éviter la confrontation frontale
 
 Liddell Hart démontre que les victoires décisives sont rarement obtenues par attaque frontale,
 mais par dislocation : déséquilibrer l'adversaire avant l'engagement, attaquer là où il
@@ -62,15 +63,15 @@ n'est pas préparé, épuiser sa résistance sans contact direct.
 
 | Situation dans l'audit | Approche indirecte recommandée |
 |----------------------|-------------------------------|
-| Concurrent bien implanté (C = ROUGE) | Ne pas attaquer le concurrent — contourner en adressant une douleur qu'il ne couvre pas |
-| War des prix probable | Déplacer le débat du prix vers le coût du statu quo (I = Identify Pain) |
+| Concurrent bien implanté (C = ROUGE) | Ne pas attaquer le concurrent : contourner en adressant une douleur qu'il ne couvre pas |
+| Guerre des prix probable | Déplacer le débat du prix vers le coût du statu quo (I = Identify Pain) |
 | Economic Buyer inaccessible | Contourner par le Champion ou par un partenaire allié qui y a accès |
 | Decision Criteria verrouillées | Introduire un critère nouveau (sécurité, conformité, coût de migration) qui reconfigure la grille |
 | Deal enlisé | Créer un événement déclencheur externe (rapport sectoriel, démo live, visite référence) |
 
 ---
 
-## 4. Les Lignes Intérieures de Jomini — L'avantage du compte existant
+## 4. Les Lignes Intérieures de Jomini : L'avantage du compte existant
 
 Jomini théorise la supériorité tactique de celui qui opère sur des lignes intérieures :
 moins de distance à couvrir, meilleure connaissance du terrain, capacité à concentrer
@@ -79,20 +80,20 @@ les forces plus vite que l'adversaire.
 **Application à l'audit MEDDPICC :**
 
 Si le deal concerne un **compte existant** (renouvellement, expansion, upsell) :
-- Les dimensions E, I, et C devraient être VERT par défaut — si elles ne le sont pas,
+- Les dimensions E, I, et C devraient être VERT par défaut : si elles ne le sont pas,
   c'est un signal critique : le compte est à risque de churner ou d'être chassé par un concurrent.
 - La stratégie des lignes intérieures recommande de consolider l'existant avant d'élargir.
 - NRR (Net Revenue Retention) avant ARR nouveau.
 
 Si le deal concerne un **nouveau compte** (ligne extérieure) :
-- L'avantage n'existe pas encore — il faut le créer.
+- L'avantage n'existe pas encore : il faut le créer.
 - Chaque dimension ROUGE est une ligne extérieure non sécurisée.
-- Principe : ne pas avancer sur plusieurs dimensions simultaneously — concentrer l'effort
+- Principe : ne pas avancer sur plusieurs dimensions simultanément, concentrer l'effort
   sur la dimension la plus critique (souvent E ou C).
 
 ---
 
-## 5. Le Syndrome de Valmy et la Pusillanimité — Les deux biais opposés
+## 5. Le Syndrome de Valmy et la Pusillanimité : Les deux biais opposés
 
 Le blog identifie deux biais décisionnels symétriques qui détruisent les deals :
 
@@ -118,13 +119,13 @@ encore en ROUGE, et aucune action concrète planifiée pour les résoudre.
 
 ---
 
-## 6. L'Auftragstaktik — Déléguer l'initiative au Champion
+## 6. L'Auftragstaktik : Déléguer l'initiative au Champion
 
 Moltke l'Ancien théorisait que le commandant supérieur doit donner l'intention stratégique
 (le "pourquoi") et laisser les commandants de terrain décider du "comment".
 
 En stratégie commerciale : le Champion est votre commandant de terrain interne.
-Un Champion efficace n'a pas besoin d'un script — il a besoin d'une intention claire.
+Un Champion efficace n'a pas besoin d'un script : il a besoin d'une intention claire.
 
 **Application à l'audit :**
 
@@ -133,9 +134,35 @@ mais "lui avons-nous donné l'intention et les outils pour agir ?"
 
 Checklist de l'Auftragstaktik appliquée au Champion :
 - [ ] Le Champion sait-il précisément pourquoi votre solution est dans son intérêt personnel ?
-- [ ] A-t-il du contenu adapté à partager avec l'Economic Buyer (pas un deck commercial — un argument stratégique) ?
+- [ ] A-t-il du contenu adapté à partager avec l'Economic Buyer : pas un deck commercial,
+      un argument stratégique ?
 - [ ] Lui avons-nous explicitement demandé d'organiser une réunion avec l'Economic Buyer ?
 - [ ] A-t-il les éléments pour répondre aux objections des concurrents sans nous ?
+
+---
+
+## 7. L'Opération en Profondeur : Engager les trois profondeurs simultanément
+
+Toukhatchevski constate en 1920, devant Varsovie, qu'une avance étirée s'effondre sans réserves
+fraîches : la décision se joue derrière la zone de contact, dans les états-majors, les dépôts et
+les transmissions. Triandafillov formalise l'intuition en 1929, et le règlement provisoire de
+1936 définit l'opération en profondeur comme une action menée simultanément sur trois
+profondeurs : tactique, opérative et stratégique.
+
+**Application à l'audit MEDDPICC :**
+
+Le comité d'achat se lit à la même aune. Trois profondeurs coexistent, et la manœuvre les
+engage en parallèle au lieu de les gravir une par une :
+- **tactique** : les utilisateurs et le chef de projet, qui vivent l'usage ;
+- **opérative** : sécurité, achats, juridique et DSI, qui posent les conditions ;
+- **stratégique** : le dirigeant et l'Economic Buyer, qui tranchent et financent.
+
+Un dossier resté mono-profondeur signale un veto qui travaille en silence. Le dirigeant
+(stratégique) n'entre pas en premier : son largage est prononcé quand un champion est entraîné,
+que la profondeur tactique est validée et qu'un document citable est prêt.
+
+Sans relève, un largage s'isole : l'avance en profondeur exige des réserves fraîches, pas un
+coup de force unique.
 
 ---
 
@@ -145,9 +172,9 @@ Pour rédiger la section Lecture Doctrinale du template :
 
 1. **Identifier le terrain dominant** (Section 1) en fonction du scoring global
 2. **Détecter le biais principal** du commercial sur ce deal (Section 5)
-3. **Choisir un cadre d'action** parmi les 3–4 restants selon la configuration du deal
-4. **Formuler deux recommandations concrètes** — pas de prose doctrinale sans action associée
+3. **Choisir un cadre d'action** dans les autres sections selon la configuration du deal
+4. **Formuler deux recommandations concrètes** : pas de prose doctrinale sans action associée
 
 Format attendu :
-> "[Type de terrain] — [Implication]. [Cadre doctrinal] recommande [action concrète].
+> "[Type de terrain] : [Implication]. [Cadre doctrinal] recommande [action concrète].
 > Risque de [biais] si [condition]. Action prioritaire : [quoi faire, avec qui, avant quand]."
