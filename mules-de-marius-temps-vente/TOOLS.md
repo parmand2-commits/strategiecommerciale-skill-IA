@@ -1,4 +1,4 @@
-# TOOLS.md — Manifeste d'outillage « Mules de Marius »
+# TOOLS.md : Manifeste d'outillage « Mules de Marius »
 
 Déclare le **profil de votre organisation** (taille, effectif commercial, stack) et les outils
 connectés pour l'audit du temps de vente. L'agent le lit en premier. **À configurer une fois.**
@@ -34,7 +34,7 @@ organisation:
 
 ---
 
-## Stack technologique (recommandé — alimente la manœuvre 2)
+## Stack technologique (recommandé, alimente la manœuvre 2)
 
 ```yaml
 stack:
@@ -85,24 +85,24 @@ stack:
 ### Autres outils
 
 Même format de bloc (`type`, `api_instructions`, `data_available`). L'agent utilise l'outil
-si les instructions sont opérationnelles — sinon il pose les questions d'inventaire.
+si les instructions sont opérationnelles, sinon il pose les questions d'inventaire.
 
 ---
 
 ## Notes d'usage
 
 - **Mode dégradé gracieux** : sans outil connecté, l'audit se fait par questions et estimation
-  avec l'utilisateur — il reste complet, moins automatisé.
+  avec l'utilisateur : il reste complet, moins automatisé.
 - **Scalabilité** : un dossier par organisation ou par équipe ; `TOOLS.md` change par entité
   (taille, stack, effectif).
-- **Confidentialité** : l'audit révèle des temps et des pratiques d'équipe — `anonymize: true`
+- **Confidentialité** : l'audit révèle des temps et des pratiques d'équipe, `anonymize: true`
   si le rapport circule, ne jamais persister les identifiants d'accès.
 
 ---
 
 ## Sécurité & limites (à préserver dans toute exécution)
 
-Cette skill est un **dossier d'instructions en texte pur** — elle ne contient et ne doit
+Cette skill est un **dossier d'instructions en texte pur** : elle ne contient et ne doit
 jamais contenir de fichier exécutable, de script binaire ou de code à compiler.
 
 Pendant l'exécution, l'agent respecte ces limites strictes :

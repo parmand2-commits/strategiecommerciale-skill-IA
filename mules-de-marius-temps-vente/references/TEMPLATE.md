@@ -1,4 +1,4 @@
-# TEMPLATE.md — Inventaire du train de bagages : [Organisation]
+# TEMPLATE.md · Inventaire du train de bagages : [Organisation]
 
 > **Note pour l'agent** : template de sortie. Remplir chaque champ, supprimer les annotations.
 
@@ -25,27 +25,27 @@
 
 - **Temps perdu (chariots)** : [X] h/semaine → [Y] ETP gaspillés ([Z] % de l'effectif) → [coût annuel € si fourni]
 - **Chariots priorisés** (par temps × fréquence × personnes concernées) :
-  1. [activité] — [impact]
+  1. [activité] : [impact]
   2. …
 - **Causes racines** : [champs obligatoires excessifs / rituels hérités / outils déconnectés…]
 - **Signaux de fragmentation** : [recopies manuelles, tableurs parallèles, outils jamais ouverts]
 
-## 3. PLAN D'AUTOMATISATION (MANŒUVRE 2 — LA CAPTURE REMPLACE LA SAISIE)
+## 3. PLAN D'AUTOMATISATION (MANŒUVRE 2 : LA CAPTURE REMPLACE LA SAISIE)
 
 | Charge cible | Catégorie de capteur | Gain estimé | Coût d'entrée | Prérequis | Risque |
 |---|---|---|---|---|---|
 | [logging e-mails/réunions] | **Capture d'activité** | [X] h/sem. × [N] comm. | faible | [CRM avec connecteur] | [confidentialité] |
 | … | | | | | |
 
-**Coupes immédiates (chariots purs — trimestre, sans négociation) :**
-- [activité] — suppression (réglage administrateur d'une demi-journée sur la plupart des CRM)
+**Coupes immédiates (chariots purs : trimestre, sans négociation) :**
+- [activité] : suppression (réglage administrateur d'une demi-journée sur la plupart des CRM)
 
 **Capteurs à déployer (par gain décroissant) :**
-1. [catégorie] — responsable [X], échéance [Y]
+1. [catégorie] : responsable [X], échéance [Y]
 2. …
 
 > ⚠ Garde-fou : chaque passerelle agentique ajoute de la complexité. L'arbitrage appartient au
-> commandement — une usine à gaz agentique est un chariot de plus, pas un allègement.
+> commandement : une usine à gaz agentique est un chariot de plus, pas un allègement.
 
 ## 4. PLAN DE RÉFORME 30-60-90
 
@@ -61,6 +61,6 @@ outil sans intégration native avec le CRM de référence.
 
 ---
 
-*Audit généré par la skill « Mules de Marius » — strategiecommerciale.eu. Un champ rempli pour
+*Audit généré par la skill « Mules de Marius », strategiecommerciale.eu. Un champ rempli pour
 qu'une colonne d'un tableau ne reste pas vide est un chariot de commodités, et Marius l'aurait
 brûlé avant l'aube.*

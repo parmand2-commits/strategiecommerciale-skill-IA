@@ -1,4 +1,4 @@
-# TOOLS.md — Manifeste d'outillage « Logistique de Bradley »
+# TOOLS.md : Manifeste d'outillage « Logistique de Bradley »
 
 Déclare le **profil de votre organisation** et les **outils connectés** pour l'audit
 d'enablement. L'agent le lit en premier. **À configurer une fois.**
@@ -30,7 +30,7 @@ organisation:
     - "AE"
     - "AM"
   cycle_vente: "3-6 mois"
-  revenu_moyen_deal: 25000      # € — pour estimer le coût des gaps
+  revenu_moyen_deal: 25000      # €, pour estimer le coût des gaps
   metriques_connues:            # si connues (sinon, hypothèses)
     win_rate: 0.22
     quota_attainment: 0.65
@@ -93,17 +93,17 @@ organisation:
 ## Notes d'usage
 
 - **Mode dégradé gracieux** : sans outil connecté, l'audit se fait sur les réponses au
-  questionnaire — qualitatif mais complet.
+  questionnaire, qualitatif mais complet.
 - **Scalabilité** : un dossier pour toute l'organisation ; TOOLS.md par équipe (effectif,
   métriques, connecteurs).
-- **Confidentialité** : les métriques commerciales sont sensibles — `anonymize: true` si le
+- **Confidentialité** : les métriques commerciales sont sensibles, `anonymize: true` si le
   rapport circule en interne élargi.
 
 ---
 
 ## Sécurité & limites (à préserver dans toute exécution)
 
-Cette skill est un **dossier d'instructions en texte pur** — elle ne contient et ne doit
+Cette skill est un **dossier d'instructions en texte pur** : elle ne contient et ne doit
 jamais contenir de fichier exécutable, de script binaire ou de code à compiler.
 
 Pendant l'exécution, l'agent respecte ces limites strictes :

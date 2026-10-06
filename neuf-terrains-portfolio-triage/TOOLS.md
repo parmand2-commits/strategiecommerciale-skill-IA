@@ -1,4 +1,4 @@
-# TOOLS.md — Manifeste d'outillage « Neuf Terrains »
+# TOOLS.md : Manifeste d'outillage « Neuf Terrains »
 
 Déclare le **profil de votre organisation** et les **outils connectés** pour le tri du
 portefeuille. L'agent le lit en premier à chaque exécution. **À configurer une fois.**
@@ -31,7 +31,7 @@ organisation:
   concurrents_principaux:
     - "Concurrent A"
     - "Concurrent B"
-  seuil_deal_min: 20000         # en € — en dessous, terrain "dispersé" par défaut
+  seuil_deal_min: 20000         # en € : en dessous, terrain "dispersé" par défaut
   criteres_abandon:             # signaux pour recommander le décrochage
     - "aucun contact depuis 60+ jours"
     - "aucun champion identifié"
@@ -71,8 +71,8 @@ l'outil si les instructions sont opérationnelles.
 
 - **Mode dégradé gracieux** : sans CRM connecté, trier sur les données fournies (copier-coller,
   CSV, notes). Le tri reste valide, moins riche.
-- **Scalabilité** : le même dossier sert toute l'équipe — seul `TOOLS.md` change (profil,
-  seuils, connecteurs).
+- **Scalabilité** : le même dossier sert toute l'équipe. Seul `TOOLS.md` change : profil,
+  seuils, connecteurs.
 - **Confidentialité** : ne pas persister les montants/noms hors du livrable ; `anonymize: true`
   si le tri doit circuler en interne élargi.
 
@@ -80,7 +80,7 @@ l'outil si les instructions sont opérationnelles.
 
 ## Sécurité & limites (à préserver dans toute exécution)
 
-Cette skill est un **dossier d'instructions en texte pur** — elle ne contient et ne doit
+Cette skill est un **dossier d'instructions en texte pur** : elle ne contient et ne doit
 jamais contenir de fichier exécutable, de script binaire ou de code à compiler.
 
 Pendant l'exécution, l'agent respecte ces limites strictes :

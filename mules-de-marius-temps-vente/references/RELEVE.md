@@ -1,11 +1,11 @@
-# RELEVE.md — Relevé d'activité (2 semaines)
+# RELEVE.md : Relevé d'activité (2 semaines)
 
 > À distribuer aux commerciaux de l'échantillon avant l'audit. L'objectif n'est pas la
 > précision comptable mais l'ordre de grandeur réel : chaque ligne compte.
 > Durée recommandée : **2 semaines pleines** (l'article : « Marius savait au gramme près ce que
-> portait un homme »). Un commercial remplit ce fichier — 10 minutes par jour.
+> portait un homme »). Un commercial remplit ce fichier : 10 minutes par jour.
 
-> **💡 Version tableur** : une copie prête à l'emploi est fournie dans le paquet —
+> **💡 Version tableur** : une copie prête à l'emploi est fournie dans le paquet :
 > `references/releve-activite-2-semaines.xlsx` (onglet « Relevé quotidien » avec totaux
 > automatiques + onglet « Synthèse hebdo »). Elle s'ouvre dans Excel et s'importe dans
 > Google Sheets. Le présent fichier reste la version texte de référence.
@@ -27,8 +27,8 @@
 | Jour | Activité | Outil utilisé | Temps (min) | Pour quel client/deal ? | Notes |
 |---|---|---|---|---|---|
 | Lun | Saisie CR d'appels | CRM | 45 | Deal A | 3 appels |
-| Lun | Réunion équipe hebdo | — | 60 | — | |
-| Mar | Prospection (e-mails) | Outil X | 90 | — | 25 contacts |
+| Lun | Réunion équipe hebdo | - | 60 | - | |
+| Mar | Prospection (e-mails) | Outil X | 90 | - | 25 contacts |
 | … | | | | | |
 
 ---
@@ -53,4 +53,4 @@
 2. **Quelle décision en dépend ?**
 3. **Que se passe-t-il si personne ne la remplit pendant un mois ?**
 
-*Template fourni par la skill « Mules de Marius » — strategiecommerciale.eu.*
+*Template fourni par la skill « Mules de Marius », strategiecommerciale.eu.*

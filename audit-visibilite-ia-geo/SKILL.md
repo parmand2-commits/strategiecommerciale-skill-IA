@@ -10,11 +10,9 @@ description: >
   règle du chiffre daté et attribué ; protocole de mesure mensuel de dix à quinze questions sur trois
   assistants, notées en présence, rang et formulation. Déclencheurs : "audit de visibilité IA",
   "sommes-nous cités par les IA", "AEO", "GEO", "optimisation pour les moteurs génératifs",
-  "balisage Schema.org", "llms.txt", "shortlist IA", "contenu citable". Inspiré de l'article
-  « Visibilité IA : soyez vu avant d'être shortlisté, comme à Midway » : la reconnaissance décide du
-  résultat avant le premier engagement, il faut se rendre lisible avant d'être cherché. Compatible
-  avec tout agent (Claude, ChatGPT, Gemini, Perplexity) : sans système de skills, copier
-  INSTRUCTIONS.md comme prompt système.
+  "balisage Schema.org", "llms.txt". Inspiré de l'article « Visibilité IA : soyez vu avant d'être
+  shortlisté, comme à Midway » : la reconnaissance décide avant le premier engagement. Compatible
+  avec tout agent (Claude, ChatGPT, Gemini, Perplexity) : sans système de skills, copier INSTRUCTIONS.md.
 ---
 
 # Visibilité IA : audit de reconnaissance avant shortlist
@@ -24,10 +22,9 @@ machine peut lire d'elle, et ce qui manque pour qu'elle soit citée plutôt qu'�
 
 > Principe doctrinal (article « Visibilité IA : soyez vu avant d'être shortlisté, comme à Midway ») :
 > en juin 1942, à Midway, l'amiral Nimitz aligne trois porte-avions contre quatre. La Station Hypo
-> déchiffre partiellement le code JN-25, un faux message sur une panne d'eau douce confirme la cible
-> « AF », et les hydravions repèrent la flotte adverse avant qu'elle ne voie la flotte américaine.
-> Décrypter avant de frapper : la reconnaissance décide du résultat avant le premier engagement, et
-> la shortlist se constitue dans la réponse, sans vendeur dans la pièce.
+> déchiffre le code JN-25, un faux message sur une panne d'eau douce confirme la cible « AF », et les
+> hydravions repèrent la flotte adverse avant qu'elle ne voie la flotte américaine. Décrypter avant de
+> frapper : la reconnaissance décide du résultat avant le premier engagement, sans vendeur dans la pièce.
 
 ---
 
@@ -84,10 +81,8 @@ l'écart mensuel ininterprétable.
 
 Si l'organisation n'a pas de questions écrites, reconstituer la liste en interrogeant commerciaux et
 support, et consigner pour chacune son origine. La liste est validée avant la première mesure, puis
-figée.
-
-Ouvrir un tableau de suivi : une ligne par question, une colonne par assistant, et les colonnes de
-notation de l'Étape 4. Le même tableau sert chaque mois, les relevés s'empilent par date.
+figée. Ouvrir un tableau de suivi : une ligne par question, une colonne par assistant, et les colonnes
+de notation de l'Étape 4. Le même tableau sert chaque mois, les relevés s'empilent par date.
 
 ---
 
@@ -109,11 +104,10 @@ Pour chaque URL du périmètre :
 2. Isoler les blocs de données structurées de type `application/ld+json`.
 3. Relever les types déclarés et les confronter à Schema.org.
 4. Consigner chaque écart et chaque erreur bloquante.
+5. Répéter le contrôle à chaque évolution du site : un balisage conforme un mois peut se dégrader à
+   la refonte suivante.
 
-Le contrôle se répète à chaque évolution du site : un balisage conforme un mois peut se dégrader au
-passage suivant d'une refonte.
-
-### 2c. Les types attendus
+### 2c. Types attendus, grille et lecture
 
 | Type | Ce qu'il déclare | Attendu |
 |------|------------------|---------|
@@ -121,8 +115,6 @@ passage suivant d'une refonte.
 | **Product ou Service** | Offre : périmètre, catégorie, tarification | Obligatoire, l'un des deux selon l'offre |
 | **FAQPage** | Questions fréquentes et réponses courtes | Obligatoire dès que des questions fréquentes existent |
 | **Review** | Avis et notes | Optionnel, recommandé si des avis publics existent |
-
-### 2d. Grille et lecture
 
 Remplir une ligne par page : type détecté, conformité, champs obligatoires manquants, erreurs
 bloquantes, méthode de vérification, statut. Les statuts possibles sont : conforme, partiel, absent,
@@ -137,7 +129,7 @@ lecteur humain qui aurait haussé un sourcil (article, manœuvre 1).
 
 ## Étape 3 : Chantier 2, contenu citable
 
-### 3a. La liste des réponses manquantes
+### 3a. Réponses manquantes et chiffre daté et attribué
 
 Pour chaque question figée, vérifier qu'une page y répond explicitement :
 
@@ -148,13 +140,11 @@ Pour chaque question figée, vérifier qu'une page y répond explicitement :
 Une question sans page correspondante, ou dont la réponse tient en un paragraphe narratif sans prise
 extractible, est comptée manquante.
 
-### 3b. La règle du chiffre daté et attribué
-
 Tout chiffre publié porte le nom de sa source et sa date. Un ordre de grandeur sans attribution ne
 rend pas la page citable : la formulation qui convainc un lecteur ne suffit pas à une machine qui
 vérifie. Une source de plus de douze mois est signalée comme non confirmée à la date de l'audit.
 
-### 3c. llms.txt et découvrabilité
+### 3b. llms.txt, découvrabilité et grille
 
 Relever l'état du fichier : présent ou absent, date de dernière mise à jour, nombre d'URL listées
 rapporté au nombre d'URL du périmètre, écarts entre les pages d'identité et les entrées listées. Un
@@ -163,8 +153,6 @@ llms.txt absent est consigné absent, jamais créé sans validation explicite.
 Les pages du périmètre doivent aussi être accessibles aux robots des éditeurs de modèles et présentes
 dans les corpus tiers consultés : un agent ne cite que ce qu'il a pu lire (article, manœuvre 2).
 
-### 3d. Grille du contenu citable
-
 Remplir une ligne par question : réponse courte existante, autonomie hors contexte, présence d'un
 chiffre daté et attribué, page porteuse, action à mener.
 
@@ -172,13 +160,11 @@ chiffre daté et attribué, page porteuse, action à mener.
 
 ## Étape 4 : Chantier 3, mesure
 
-### 4a. Le protocole figé
+### 4a. Protocole figé et notation
 
 Poser les dix à quinze questions, avec les **mêmes formulations**, sur les **trois assistants**
 retenus, dans le même ordre. Ce qui change d'un passage à l'autre, c'est la réponse observée, pas la
 question posée.
-
-### 4b. La notation en trois colonnes
 
 Pour chaque couple question et assistant, noter trois choses (article, manœuvre 3) :
 
@@ -192,7 +178,7 @@ Ajouter les sources citées par l'assistant, et signaler toute question où un c
 place de la marque. La formulation relevée décrit ce que la machine a lu : elle n'est pas un jugement
 porté sur la marque et ne se corrige pas dans le relevé.
 
-### 4c. La synthèse et le rythme
+### 4b. Synthèse et rythme
 
 Produire, par assistant : le taux de présence (questions citées rapportées au total), le rang médian,
 et l'écart avec le mois précédent. Ajouter la liste des questions où un concurrent apparaît à votre
@@ -212,7 +198,7 @@ Suivre la structure de `references/TEMPLATE.md` : en-tête, inventaire du balisa
 mesure, synthèse, chantier, repères externes. Format par défaut Markdown, nommé
 `audit-visibilite-ia-[Marque]-[DateJour].md`.
 
-### 5b. Un seul chantier et une réinstrumentation
+### 5b. Chantier et réinstrumentation
 
 Le chantier de mesure se poursuit chaque mois : c'est le radar, il ne s'arrête pas. Le chantier à
 ouvrir pour le cycle suivant est retenu parmi les deux autres, le balisage et le contenu citable, en

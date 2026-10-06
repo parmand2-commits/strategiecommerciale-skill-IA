@@ -1,4 +1,4 @@
-# TEMPLATE.md — Audit Enablement : [Organisation]
+# TEMPLATE.md · Audit Enablement : [Organisation]
 
 > **Note pour l'agent** : template de sortie. Remplir chaque champ, supprimer les annotations.
 
@@ -7,7 +7,7 @@
 ## AUDIT DE LA LOGISTIQUE COMMERCIALE
 
 **Organisation :** [Nom] · **Date :** [JJ/MM/AAAA] · **Effectif commercial :** [N]
-**Métriques connues :** [win rate / quota attainment / durée cycle — ou « non fournies »]
+**Métriques connues :** [win rate / quota attainment / durée cycle (ou « non fournies »)]
 
 ---
 
@@ -30,7 +30,7 @@
 
 ## 2. GAPS IDENTIFIÉS
 
-- [Gap 1 — concret, avec situation exemple]
+- [Gap 1 (concret, avec situation exemple)]
 - [Gap 2]
 - [Gap 3]
 
@@ -41,7 +41,7 @@
 | [Gap] | [productivité / win rate / quota / cycle] | [hypothèse chiffrée] |
 | … | | |
 
-## 4. PLAN D'ACTION — RED BALL EXPRESS
+## 4. PLAN D'ACTION : RED BALL EXPRESS
 
 | Priorité | Action | Pour qui | Lien métrique | Effort | Quick win ? |
 |---|---|---|---|---|---|
@@ -57,4 +57,4 @@
 
 ---
 
-*Audit généré par la skill « Logistique de Bradley » — strategiecommerciale.eu*
+*Audit généré par la skill « Logistique de Bradley » · strategiecommerciale.eu*

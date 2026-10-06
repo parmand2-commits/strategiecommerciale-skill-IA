@@ -1,16 +1,21 @@
 ---
 name: neuf-terrains-portfolio-triage
-version: 1.0.0
+version: 1.0.1
 description: >
   Trier un portefeuille d'opportunités commerciales avec la grille des Neuf Terrains de Sun Tzu :
   classer chaque compte dans un terrain, déduire la posture recommandée (investir, accélérer,
-  décrocher, contourner, consolider) et prioriser les 3 comptes qui méritent 80% de l'effort.
-  Déclencheurs : "trie mon portefeuille", "prioriser mes deals", "revue de pipeline", "quels comptes
-  attaquer cette semaine", "cartographie de mon portefeuille", "quels deals abandonner".
-  Compatible avec tout agent : copier INSTRUCTIONS.md comme prompt système si pas de système de skills.
+  décrocher, contourner, consolider) et prioriser les 3 comptes qui méritent 80 % de l'effort.
+  Le livrable est un tableau de triage : une ligne par compte, une analyse par terrain, les
+  priorités de la semaine et les signaux d'alerte. Déclencheurs : "trie mon portefeuille",
+  "prioriser mes deals", "revue de pipeline", "quels comptes attaquer cette semaine",
+  "cartographie de mon portefeuille", "quels deals abandonner". Inspiré de l'article
+  « Cartographier votre portefeuille clients : les 9 terrains de Sun Tzu » : chaque terrain
+  impose sa posture, et la force se concentre là où le terrain est décisif. Compatible avec tout
+  agent (Claude, ChatGPT, Gemini, Perplexity) : sans système de skills, copier INSTRUCTIONS.md
+  comme prompt système.
 ---
 
-# Neuf Terrains — Portfolio Triage
+# Neuf Terrains : Portfolio Triage
 
 Applique la grille du chapitre XI de Sun Tzu au portefeuille commercial : chaque opportunité
 occupe un terrain, et chaque terrain impose une posture. Le livrable est un tri actionnable :
@@ -18,11 +23,11 @@ occupe un terrain, et chaque terrain impose une posture. Le livrable est un tri 
 
 > Principe doctrinal (article « Les Neuf Terrains de Sun Tzu ») : terrains possédés (clients),
 > disputés (opportunités), contrôlés par l'ennemi (comptes concurrents). À chaque terrain
-> correspond une posture — ne pas traiter un terrain grave comme un terrain léger.
+> correspond une posture : ne pas traiter un terrain grave comme un terrain léger.
 
 ---
 
-## Étape 0 — Initialisation
+## Étape 0 : Initialisation
 
 ### 0a. Lire le manifeste
 
@@ -42,21 +47,21 @@ Si l'utilisateur dit « prends-les dans mon CRM » : utiliser les instructions d
 
 ---
 
-## Étape 1 — Classement par terrain
+## Étape 1 : Classement par terrain
 
 Pour **chaque** compte, déterminer le terrain dominant parmi les 9 :
 
 | Terrain | Signaux | Posture |
 |---------|---------|---------|
-| **Dispersé** | Compte dans son confort, faible pression, qualification superficielle | Ne pas s'engager — attendre un signal plus fort |
+| **Dispersé** | Compte dans son confort, faible pression, qualification superficielle | Ne pas s'engager : attendre un signal plus fort |
 | **Léger** | Premier contact, qualification incomplète | Avancer vite ou décrocher |
 | **Disputé** | Prospect activement sollicité par des concurrents | Forcer la décision rapidement |
 | **Ouvert** | Accès libre, pas de position dominante | Construire l'asymétrie informationnelle |
 | **Carrefour** | Décision à forts enjeux, plusieurs parties influentes | Chercher des alliances (champions, partenaires) |
 | **Grave** | Deal avancé, fort investissement mutuel | Consolider le champion, verrouiller le calendrier |
 | **Difficile** | Cycle long, obstacles structurels (budget gelé, réorg) | Progression prudente, évaluer le coût d'opportunité |
-| **Encerclé** | Concurrent très bien implanté | Ruse et différenciation radicale — pas de frontal |
-| **Mortel** | Décision imminente, risque total de perte | Urgence maximale — le statu quo est la défaite |
+| **Encerclé** | Concurrent très bien implanté | Ruse et différenciation radicale : pas de frontal |
+| **Mortel** | Décision imminente, risque total de perte | Urgence maximale : le statu quo est la défaite |
 
 Règles de classement :
 - Le **stade** et la **présence d'un champion** sont les deux signaux les plus discriminants.
@@ -65,7 +70,7 @@ Règles de classement :
 
 ---
 
-## Étape 2 — Priorisation
+## Étape 2 : Priorisation
 
 1. **Top 3 de la semaine** : les 3 comptes qui méritent 80 % de l'effort, justifiés par le
    terrain + la valeur + la probabilité de mouvement rapide.
@@ -75,7 +80,7 @@ Règles de classement :
 
 ---
 
-## Étape 3 — Sortie
+## Étape 3 : Sortie
 
 Lire `references/TEMPLATE.md` et produire :
 1. **Tableau de synthèse** : compte | terrain | posture | action (une ligne par compte).
@@ -85,7 +90,7 @@ Lire `references/TEMPLATE.md` et produire :
 
 ---
 
-## Étape 4 — Contrôle qualité
+## Étape 4 : Contrôle qualité
 
 - [ ] Chaque compte est classé dans un terrain (aucun « non classé »)
 - [ ] Chaque terrain a une action concrète (pas de prose doctrinale seule)
@@ -110,6 +115,6 @@ Lire `references/TEMPLATE.md` et produire :
 
 | Fichier | Quand le lire |
 |---------|--------------|
-| `TOOLS.md` | **En premier** — profil + connecteurs |
+| `TOOLS.md` | **En premier** : profil + connecteurs |
 | `INSTRUCTIONS.md` | Agents sans système de skills |
-| `references/TEMPLATE.md` | Avant la sortie — structure du livrable |
+| `references/TEMPLATE.md` | Avant la sortie : structure du livrable |

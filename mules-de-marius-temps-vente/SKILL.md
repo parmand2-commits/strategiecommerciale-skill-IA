@@ -1,19 +1,23 @@
 ---
 name: mules-de-marius-temps-vente
-version: 1.0.0
+version: 1.0.1
 description: >
-  Utiliser ce skill pour auditer le temps de vente B2B d'une équipe commerciale et identifier
-  les « chariots inutiles » : les tâches administratives que personne ne lit et qui ne produisent
-  aucun revenu. Déclencheurs : « audit du temps de mes commerciaux », « mes commerciaux passent
-  trop de temps en saisie/administratif », « récupérer du temps de vente », « chariots inutiles »,
-  « mules de Marius », « inventaire du train de bagages », ou toute revue d'organisation
-  commerciale avant un achat d'outil de productivité. Inspirée de la réforme de Marius (107 av.
-  J.-C.) et de l'article « Vos commerciaux sont des gratte-papiers » du blog strategiecommerciale.eu.
-  Compatible avec tout agent (Claude, ChatGPT, Gemini, Perplexity…) : sans système de skills,
-  copier le contenu de INSTRUCTIONS.md comme prompt système.
+  Auditer le temps de vente B2B d'une équipe commerciale et identifier les « chariots inutiles » :
+  les tâches administratives que personne ne lit et qui ne produisent aucun revenu. Le livrable
+  est un rapport « Inventaire du train de bagages » : classement de chaque activité en trois
+  colonnes (charge utile, charge de commandement, chariot), diagnostic chiffré du temps perdu,
+  plan d'automatisation par catégorie d'outils et plan de réforme 30-60-90 jours.
+  Déclencheurs : "audit du temps de mes commerciaux", "mes commerciaux passent trop de temps en
+  administratif", "récupérer du temps de vente", "chariots inutiles", "mules de Marius",
+  "inventaire du train de bagages".
+  Inspiré de l'article « Vos commerciaux sont des gratte-papiers : récupérez leur temps de vente
+  B2B » (26 août 2026, https://strategiecommerciale.eu/temps-de-vente-b2b-mules-de-marius/) :
+  le temps de vente se récupère en supprimant la saisie, pas en l'allégeant.
+  Compatible avec tout agent (Claude, ChatGPT, Gemini, Perplexity) : sans système de skills,
+  copier INSTRUCTIONS.md comme prompt système.
 ---
 
-# Mules de Marius — Audit du temps de vente B2B
+# Mules de Marius : Audit du temps de vente B2B
 
 Audite la charge administrative d'une équipe commerciale avec la méthode de Marius : inventorier
 le train de bagages, distinguer la charge utile du chariot, puis remplacer la saisie par la capture.
@@ -25,12 +29,12 @@ La doctrine : en 107 av. J.-C., Marius n'a pas allégé ses légionnaires, il a 
 bagages (l'*impedimenta*) et transféré la charge utile sur le dos de l'homme. Chaque objet était
 trié sur une question unique : sert-il au combat dans les quarante-huit heures ? Un rapport de
 visite qui alimente la préparation du prochain rendez-vous est un pieu de palissade. Un champ
-rempli pour qu'une colonne d'un tableau ne reste pas vide est un chariot de commodités — et Marius
+rempli pour qu'une colonne d'un tableau ne reste pas vide est un chariot de commodités, et Marius
 l'aurait brûlé avant l'aube.
 
 ---
 
-## Étape 0 — Initialisation
+## Étape 0 : Initialisation
 
 ### 0a. Lire le manifeste d'outils
 
@@ -63,10 +67,10 @@ construit à l'oral, activité par activité.
 
 ---
 
-## Étape 1 — Inventaire du train de bagages (manœuvre 1 de l'article)
+## Étape 1 : Inventaire du train de bagages (manœuvre 1 de l'article)
 
 > « Aucune direction commerciale ne connaît réellement la répartition du temps de ses équipes.
-> Les estimations en comité oscillent entre le déni et l'approximation. » — Commencez par mesurer.
+> Les estimations en comité oscillent entre le déni et l'approximation. » : Commencez par mesurer.
 
 ### 1a. Relevé (si fourni)
 
@@ -102,7 +106,7 @@ font manquer des opportunités (Pipedrive, CRM Trends Report 2026).
 
 ---
 
-## Étape 2 — Classement et diagnostic
+## Étape 2 : Classement et diagnostic
 
 ### 2a. Classer chaque activité en trois colonnes
 
@@ -129,7 +133,7 @@ perdre la mémoire commerciale, soit tout garder et immobiliser la colonne.
 
 ---
 
-## Étape 3 — Plan d'automatisation (manœuvre 2 de l'article)
+## Étape 3 : Plan d'automatisation (manœuvre 2 de l'article)
 
 > « Pour chaque donnée que vous exigez d'un commercial, posez la question du capteur avant celle
 > du formulaire. Ce que la machine porte, l'homme ne le porte pas. »
@@ -139,7 +143,7 @@ perdre la mémoire commerciale, soit tout garder et immobiliser la colonne.
 Pour chaque activité classée « chariot » ou « charge de commandement à forte saisie », appliquer
 la cascade dans l'ordre :
 
-1. **Supprimer** (si aucune décision aval identifiée) — gratuit, immédiat
+1. **Supprimer** (si aucune décision aval identifiée) : gratuit, immédiat
 2. **Capturer automatiquement** : la donnée d'activité (appels, e-mails, réunions, participants,
    prochaines étapes) n'a plus aucune raison d'être frappée au clavier par un être humain payé
    pour vendre
@@ -160,7 +164,7 @@ Rester au niveau des **catégories d'outils** (jamais de prescription produit) :
 
 Pour chaque recommandation retenue : **gain estimé** (h/semaine × commerciaux concernés), **coût
 d'entrée** (faible/moyen/élevé), **prérequis**, **risque**. Signaler explicitement le garde-fou de
-l'article : l'agent ne dispense pas de l'arbitrage — chaque passerelle ajoute de la complexité, et
+l'article : l'agent ne dispense pas de l'arbitrage : chaque passerelle ajoute de la complexité, et
 c'est au commandement de décider lesquelles valent le coup, au risque de créer une usine à gaz
 agentique contre-productive. Ne recommander une catégorie que si la charge qu'elle capture est
 réellement présente et mesurée à l'étape 2.
@@ -173,7 +177,7 @@ Présenter les recommandations en deux listes :
 
 ---
 
-## Étape 4 — Plan de réforme
+## Étape 4 : Plan de réforme
 
 Traduire les décisions en plan 30-60-90 jours :
 
@@ -189,7 +193,7 @@ unique avec droit de veto sur tout nouvel outil sans intégration native avec le
 
 ---
 
-## Étape 5 — Sortie
+## Étape 5 : Sortie
 
 ### 5a. Format par défaut : Markdown
 
@@ -233,5 +237,5 @@ Ce format permet de brancher l'audit sur des workflows automatisés (n8n, Make, 
 
 ---
 
-*Skill « Mules de Marius » — strategiecommerciale.eu. Doctrines : réforme de Marius (107 av.
+*Skill « Mules de Marius », strategiecommerciale.eu. Doctrines : réforme de Marius (107 av.
 J.-C.), Frontin (Stratagèmes IV), article « Vos commerciaux sont des gratte-papiers » (2026).*

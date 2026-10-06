@@ -1,4 +1,4 @@
-# TEMPLATE.md — Triage du portefeuille : [Date]
+# TEMPLATE.md : Triage du portefeuille, [Date]
 
 > **Note pour l'agent** : template de sortie. Remplir chaque champ, supprimer les annotations.
 
@@ -20,18 +20,18 @@
 
 ## 2. ANALYSE PAR TERRAIN
 
-### Terrain [X] — [nom]
+### Terrain [X] : [nom]
 [2-3 phrases : pourquoi ces comptes sont sur ce terrain, ce que ça implique]
 **Action :** [concrète]
 
-### Terrain [Y] — [nom]
+### Terrain [Y] : [nom]
 …
 
 ## 3. PRIORITÉS DE LA SEMAINE
 
-1. **[Compte]** — [terrain] : [justification stratégique + action cette semaine]
-2. **[Compte]** — [terrain] : [justification]
-3. **[Compte]** — [terrain] : [justification]
+1. **[Compte]** ([terrain]) : [justification stratégique + action cette semaine]
+2. **[Compte]** ([terrain]) : [justification]
+3. **[Compte]** ([terrain]) : [justification]
 
 ## 4. SIGNAUX D'ALERTE
 
@@ -40,4 +40,4 @@
 
 ---
 
-*Triage généré par la skill « Neuf Terrains » — strategiecommerciale.eu*
+*Triage généré par la skill « Neuf Terrains » (strategiecommerciale.eu).*
