@@ -2,7 +2,7 @@
 
 > **Exemple golden file** : sortie de référence de la skill « Coup d'Œil » sur un cas
 > entièrement fictif. Compte, personnes, chiffres et sources sont inventés et servent à
-> illustrer la structure attendue du briefing de pré-appel, du gabarit au bloc de clôture.
+> illustrer la structure attendue du briefing de pré-appel, du gabarit au compte rendu d'appel.
 
 ---
 
@@ -34,7 +34,28 @@ juin 2026 et a annoncé un plan de modernisation des tournées (Les Échos Logis
 semestre 2026 (presse spécialisée, 21/08/2026) et recrute 40 conducteurs, poste en tension
 (offres d'emploi du groupe, consultées le 05/10/2026).
 
-## 2. ENJEUX STRATÉGIQUES
+## 2. BROUILLARD ET FRICTION
+
+**Brouillard (ce que le briefing ignore)**
+
+- Qui porte le budget du plan de modernisation depuis l'arrivée de la directrice générale :
+  *question d'appel* « Qui porte le budget du plan de modernisation, et qui le défend en
+  comité ? »
+- Le taux de départ réel des conducteurs : *question d'appel* « Combien de conducteurs sont
+  partis sur les douze derniers mois, et où vont-ils ? »
+- L'outil de tournée en place et son échéance contractuelle : *question d'appel* « Sur quel
+  outil tournent vos tournées aujourd'hui, et quand le contrat est-il renouvelé ? »
+
+**Friction d'exécution (ce qui empêchera d'agir)**
+
+| Source | Risque pendant l'appel | Parade |
+|---|---|---|
+| danger | citer un chiffre périmé ou un effectif approximatif devant la directrice des opérations | ne citer que les deux chiffres datés du communiqué, annoncer « non audité » pour les autres |
+| effort | le briefing est lu entre deux réunions, le commercial reprend son pitch | une page, question d'ouverture en tête, trois minutes de lecture |
+| incertitude | la fiche CRM ne porte ni effectif du dernier kilomètre ni parc de véhicules | dater la donnée interne, signaler les champs vides à la saisie |
+| hasard | la directrice générale, arrivée en juin, repriorise le plan et retire le sponsor | prévoir la question « qui décide si le plan est repriorisé ? » |
+
+## 3. ENJEUX STRATÉGIQUES
 
 - Réduire le coût par colis livré sur les tournées urbaines, sous pression de la hausse du
   carburant et des restrictions de circulation en centre-ville (note sectorielle, 15/09/2026).
@@ -43,7 +64,7 @@ semestre 2026 (presse spécialisée, 21/08/2026) et recrute 40 conducteurs, post
 - Retenir les conducteurs en allégeant la charge de fin de tournée (entretien publié par la
   directrice générale, 03/07/2026).
 
-## 3. ANGLES D'ATTAQUE
+## 4. ANGLES D'ATTAQUE
 
 > **Angle 1 : La marge par tournée se décide avant le départ du dépôt**
 > Préparer une tournée sur des données de la veille, c'est payer le colis cher le matin et le
@@ -66,7 +87,7 @@ semestre 2026 (presse spécialisée, 21/08/2026) et recrute 40 conducteurs, post
 > **Question d'ouverture :** « Sur quoi vous appuyez-vous aujourd'hui pour prouver vos
 > kilomètres et vos émissions par tournée ? »
 
-## 4. QUESTIONS À POSER
+## 5. QUESTIONS À POSER
 
 1. « Qu'est-ce qui a changé chez vous pour que le sujet arrive sur la table maintenant ? »
    (question d'ouverture unique, à poser en premier)
@@ -75,7 +96,7 @@ semestre 2026 (presse spécialisée, 21/08/2026) et recrute 40 conducteurs, post
 4. « Qu'avez-vous déjà essayé pour alléger la fin de tournée, et pourquoi cela n'a pas tenu ? »
 5. « Si on regarde dans six mois, à quoi verrez-vous que le sujet est réglé ? »
 
-## 5. SIGNAUX À ÉCOUTER
+## 6. SIGNAUX À ÉCOUTER
 
 - **Angle 1 confirmé si** : l'interlocutrice décrit des arbitrages manuels, des tournées
   reconstruites le matin, un coût par colis qu'elle suit sans pouvoir l'expliquer.
@@ -86,7 +107,7 @@ semestre 2026 (presse spécialisée, 21/08/2026) et recrute 40 conducteurs, post
 - **Alarme** : aucun événement déclencheur nommable, un interlocuteur qui demande « une démo
   rapide », ou un budget déjà engagé sur une solution concurrente sans évaluation.
 
-## 6. RISQUES ET OBJECTIONS PROBABLES
+## 7. RISQUES ET OBJECTIONS PROBABLES
 
 | Objection probable | Esquive recommandée |
 |---|---|
@@ -94,13 +115,13 @@ semestre 2026 (presse spécialisée, 21/08/2026) et recrute 40 conducteurs, post
 | « Nos conducteurs ne sont pas à l'aise » | Viser la fin de tournée, moins de saisie |
 | « Ce n'est pas le moment, on change de direction » | Relier au plan de modernisation, proposer un pilote |
 
-## 7. DÉCISION DEMANDÉE
+## 8. DÉCISION DEMANDÉE
 
 **En fin d'appel, demander :** un atelier de deux heures sur une plateforme pilote, avec la
 directrice des opérations et un exploitant, pour rejouer trois tournées réelles et chiffrer
 l'écart de coût par colis. Formuler la demande explicitement avant de raccrocher.
 
-## 8. TRACE CRM : CHAMP « PROBLÈME CLIENT »
+## 9. TRACE CRM : CHAMP « PROBLÈME CLIENT »
 
 > **Texte à saisir, dans les mots de l'acheteur :** « Nos tournées urbaines coûtent trop cher
 > et on n'arrive pas à le prouver ; nos conducteurs partent, et je passe mes matinées à
@@ -111,7 +132,7 @@ l'écart de coût par colis. Formuler la demande explicitement avant de raccroch
   opérations », « solution de tournée intelligente ».
 - Champ contrôlé à la prochaine revue de pipeline.
 
-## 9. CHARTE D'ENGAGEMENT (RAPPEL DE FIN)
+## 10. CHARTE D'ENGAGEMENT (RAPPEL DE FIN)
 
 - Ce briefing a été produit sur des sources externes datées de moins de 12 mois.
 - Aucun chiffre client n'est affirmé sans confirmation : les données non confirmées sont
@@ -119,6 +140,18 @@ l'écart de coût par colis. Formuler la demande explicitement avant de raccroch
 - **Actes opposables réservés à une validation humaine :** tout message au client, tout
   chiffrage et toute réponse à appel d'offres issus de ce briefing doivent être validés par un
   humain avant envoi.
+
+---
+
+## COMPTE RENDU D'APPEL
+
+- **Annoncé :** angle 2 (turnover lié à la charge de fin de tournée), événement déclencheur
+  supposé : le plan de modernisation de la directrice générale.
+- **Constaté :** événement déclencheur réel : la perte des deux appels d'offres et la pression
+  d'un client donneur d'ordre. Angle 2 confirmé, angle 3 renforcé par un audit annoncé. Friction
+  rencontrée : la fiche CRM ne portait pas le bon effectif, corrigé en séance.
+- **Correction :** ajouter la question « qui, chez votre client donneur d'ordre, demande la
+  preuve ? » au prochain briefing.
 
 ---
 

@@ -68,6 +68,27 @@ charte_engagement:
 
 ---
 
+## Mesure de l'exécution (configuration de la maison)
+
+Un briefing ne se juge pas sur sa longueur mais sur ce qu'il laisse dans les outils. Ces seuils
+pilotent l'Étape 5 : signaux avancés relevés à chaque appel, résultat relevé au trimestre.
+
+```yaml
+mesure:
+  production_max_minutes: 10        # temps de production du briefing
+  lecture_max_minutes: 3            # temps de lecture avant l'appel
+  traces_avant_appel:               # signaux avancés, relevés à chaque appel
+    - "briefing produit et lu avant l'appel"
+    - "champ problème client saisi"
+    - "question d'ouverture posée"
+  traces_apres_appel:               # résultat, relevé au trimestre
+    - "taux de qualification des appels briefés"
+    - "taux de transformation des opportunités briefées"
+  compte_rendu: trois_lignes        # annoncé / constaté / correction, à chaud
+```
+
+---
+
 ## Outils connectés (optionnels, décommentez et configurez selon votre stack)
 
 ### CRM (exemple : Salesforce, HubSpot, Dynamics, Pipedrive)

@@ -2,7 +2,8 @@
 
 > **Note pour l'agent** : template de sortie. Remplir chaque champ annoté `[...]` et supprimer
 > les annotations dans le livrable final. Les champs vides restent visibles. Le premier
-> rendez-vous s'ouvre par la question de Foch et interdit la démonstration.
+> rendez-vous s'ouvre par la question de Foch et interdit la démonstration. Le briefing sépare
+> le brouillard (ce que l'on ignore) de la friction (ce qui empêchera d'agir).
 
 ---
 
@@ -35,7 +36,28 @@
 
 [3 à 5 lignes factuelles sourcées.]
 
-## 2. ENJEUX STRATÉGIQUES
+## 2. BROUILLARD ET FRICTION
+
+<!-- Deux blocs distincts. Le brouillard est le manque d'informations sur l'acheteur : 3
+     inconnues maximum, chacune avec la question d'appel qui la lèvera. La friction est ce qui
+     empêchera d'agir sur ce que l'on sait : 3 maximum, chacune avec sa parade. Ne jamais
+     remplir une inconnue par une inférence présentée comme un fait. -->
+
+**Brouillard (ce que le briefing ignore)**
+
+- [Inconnue 1] : *question d'appel qui la lève* « [question] »
+- [Inconnue 2] : *question d'appel qui la lève* « [question] »
+- [Inconnue 3] : *question d'appel qui la lève* « [question] »
+
+**Friction d'exécution (ce qui empêchera d'agir)**
+
+| Source | Risque pendant l'appel | Parade |
+|---|---|---|
+| [danger / effort / incertitude / hasard] | [ce qui peut faire dérailler l'appel de notre côté] | [ce que le commercial fait concrètement] |
+| [danger / effort / incertitude / hasard] | [risque] | [parade] |
+| [danger / effort / incertitude / hasard] | [risque] | [parade] |
+
+## 3. ENJEUX STRATÉGIQUES
 
 <!-- 2 à 3 priorités du compte. Chaque enjeu porte sa source et sa date. -->
 
@@ -43,10 +65,11 @@
 - [Enjeu 2] : *(source, date)*
 - [Enjeu 3] : *(source, date)*
 
-## 3. ANGLES D'ATTAQUE
+## 4. ANGLES D'ATTAQUE
 
 <!-- EXACTEMENT 3 angles, différenciés, formulés en bénéfice prospect et jamais en
-     caractéristique produit. Chaque angle : un titre, 2 à 3 phrases, une question d'ouverture. -->
+     caractéristique produit. Chaque angle : un titre, 2 à 3 phrases, une question d'ouverture.
+     Un angle est une hypothèse à éprouver, jamais un fait établi. -->
 
 > **Angle 1 : [titre de l'angle]**
 > [2 à 3 phrases en bénéfice prospect, jamais en caractéristique produit]
@@ -60,7 +83,7 @@
 > [2 à 3 phrases en bénéfice prospect]
 > **Question d'ouverture :** « [question] »
 
-## 4. QUESTIONS À POSER
+## 5. QUESTIONS À POSER
 
 <!-- 5 questions maximum, ouvertes, classées par priorité. La première est la question
      d'ouverture unique sur l'événement déclencheur (rappel de la section 0). -->
@@ -71,7 +94,7 @@
 4. [Question ouverte]
 5. [Question ouverte]
 
-## 5. SIGNAUX À ÉCOUTER
+## 6. SIGNAUX À ÉCOUTER
 
 <!-- Ce qui, entendu pendant l'appel, confirme ou infirme chaque angle, plus une alarme. -->
 
@@ -80,9 +103,10 @@
 - **Angle 3 confirmé si** : [ce qu'on entendrait]
 - **Alarme** : [ce qui indiquerait que le deal déraille]
 
-## 6. RISQUES ET OBJECTIONS PROBABLES
+## 7. RISQUES ET OBJECTIONS PROBABLES
 
-<!-- 3 objections maximum, avec l'esquive recommandée. Jamais de sur-claim dans l'esquive. -->
+<!-- 3 objections du client maximum, avec l'esquive recommandée. Jamais de sur-claim dans
+     l'esquive. Les frictions d'exécution sont traitées en section 2, pas ici. -->
 
 | Objection probable | Esquive recommandée |
 |---|---|
@@ -90,12 +114,12 @@
 | [Objection] | [Comment y répondre] |
 | [Objection] | [Comment y répondre] |
 
-## 7. DÉCISION DEMANDÉE
+## 8. DÉCISION DEMANDÉE
 
 **En fin d'appel, demander :** [la prochaine étape concrète : réunion avec X, accès à Y,
 pilote, devis, formulée explicitement]
 
-## 8. TRACE CRM : CHAMP « PROBLÈME CLIENT »
+## 9. TRACE CRM : CHAMP « PROBLÈME CLIENT »
 
 <!-- Texte du champ « problème client » rédigé DANS LES MOTS DE L'ACHETEUR. Pas de
      reformulation commerciale, pas de vocabulaire produit, pas de bénéfice. Indiquer si le
@@ -108,7 +132,7 @@ pilote, devis, formulée explicitement]
 - Reformulations interdites : [liste des formulations commerciales à ne pas écrire]
 - Champ contrôlé à la prochaine revue de pipeline.
 
-## 9. CHARTE D'ENGAGEMENT (RAPPEL DE FIN)
+## 10. CHARTE D'ENGAGEMENT (RAPPEL DE FIN)
 
 <!-- Bloc de clôture obligatoire. Rappel de la charte d'engagement de l'équipe et de la
      validation humaine requise pour tout acte opposable. Ne pas le présenter comme une
@@ -120,6 +144,16 @@ pilote, devis, formulée explicitement]
 - **Actes opposables réservés à une validation humaine :** tout message au client, tout
   chiffrage et toute réponse à appel d'offres issus de ce briefing doivent être validés par
   un humain avant envoi.
+
+---
+
+## COMPTE RENDU D'APPEL (à remplir après l'appel, trois lignes)
+
+<!-- À chaud, trois lignes maximum. Ce qui est écrit ici nourrit le briefing suivant. -->
+
+- **Annoncé :** [angle retenu, événement déclencheur supposé]
+- **Constaté :** [événement déclencheur réel, angle qui a porté, friction rencontrée]
+- **Correction :** [une seule correction pour le prochain briefing]
 
 ---
 
