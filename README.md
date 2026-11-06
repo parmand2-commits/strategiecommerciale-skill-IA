@@ -69,13 +69,8 @@ Règles de la maison, contrôlées automatiquement à chaque proposition :
 
 ## Vérification
 
-Le contrôle tourne dans le workflow d'intégration continue et peut être lancé localement :
-
-```
-python3 verifier_skills.py
-```
-
-Le code de sortie vaut 1 si une règle bloquante n'est pas respectée.
+Chaque proposition passe un contrôle avant publication : structure du dossier, frontmatter,
+absence de tiret cadratin, sources datées. Une skill non conforme n'est jamais publiée.
 
 ## Licence
 
