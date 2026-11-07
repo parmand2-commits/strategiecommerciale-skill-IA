@@ -1,6 +1,6 @@
 ---
 name: veille-concurrentielle
-version: 1.0.0
+version: 1.0.1
 description: >
   Qualifier et mesurer une veille concurrentielle B2B : transformer des changements relevés
   sur des sources publiques en signaux notés, en briefs datés et en indicateurs de contribution.

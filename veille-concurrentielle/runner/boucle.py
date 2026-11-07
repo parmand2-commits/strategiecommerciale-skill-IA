@@ -13,7 +13,8 @@ Usage :
     python3 boucle.py --config config.json [--state etat.json]
                     [--out ./out] [--dry] [--force] [--timeout 20]
 
-Code de sortie : 0 normal, 2 si au moins une source est en échec, 1 sur erreur.
+Codes de sortie : 0 en marche normale, y compris avec une source en échec ; 2 si toutes les
+sources tombent ; 1 sur erreur de configuration.
 
 Dépendances : bibliothèque standard uniquement (urllib, hashlib, json, html, re).
 """
@@ -43,12 +44,16 @@ def charger(chemin, defaut):
     return defaut
 
 
-def ecrire_atomique(chemin, donnees):
+def ecrire_texte_atomique(chemin, texte):
     p = pathlib.Path(chemin)
     p.parent.mkdir(parents=True, exist_ok=True)
     tmp = p.with_suffix(p.suffix + ".tmp")
-    tmp.write_text(json.dumps(donnees, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.write_text(texte, encoding="utf-8")
     tmp.replace(p)
+
+
+def ecrire_atomique(chemin, donnees):
+    ecrire_texte_atomique(chemin, json.dumps(donnees, ensure_ascii=False, indent=1))
 
 
 def texte_normalise(brut):
@@ -79,8 +84,8 @@ def main():
     ap.add_argument("--config", default="config.json")
     ap.add_argument("--state", default="etat.json")
     ap.add_argument("--out", default="out")
-    ap.add_argument("--timeout", type=int, default=20)
-    ap.add_argument("--pause", type=float, default=1.0, help="délai entre deux requêtes")
+    ap.add_argument("--timeout", type=int, default=None)
+    ap.add_argument("--pause", type=float, default=None, help="délai entre deux requêtes")
     ap.add_argument("--dry", action="store_true", help="n'écrit ni l'état ni les sorties")
     ap.add_argument("--force", action="store_true", help="ignore l'état, tout est neuf")
     args = ap.parse_args()
@@ -90,8 +95,11 @@ def main():
         print(f"config absente : {args.config}", file=sys.stderr)
         return 1
     reglages = config.get("reglages", {})
-    args.pause = reglages.get("pause_secondes", args.pause)
-    args.timeout = reglages.get("delai_max_secondes", args.timeout)
+    # la ligne de commande l'emporte sur le fichier, dans cet ordre
+    if args.pause is None:
+        args.pause = reglages.get("pause_secondes", 1.0)
+    if args.timeout is None:
+        args.timeout = reglages.get("delai_max_secondes", 20)
     etat = {} if args.force else charger(args.state, {})
     jour = time.strftime("%Y-%m-%d")
     maintenant = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
@@ -143,7 +151,8 @@ def main():
                     else precedent.get("dernier_changement"),
                     "echecs": 0,
                 }
-                time.sleep(args.pause)
+                if not args.dry:
+                    time.sleep(args.pause)
 
     # spécificité : plusieurs pages d'une même famille bougent en même temps
     for evt in evenements:
@@ -163,16 +172,20 @@ def main():
     }
     if args.dry:
         print(json.dumps(resume, ensure_ascii=False, indent=1)[:2000])
-        return 2 if echecs else 0
+        return 2 if echecs and echecs >= resume["sources_verifiees"] else 0
 
-    # plusieurs passages par jour : on cumule, sans doublon (même page, même empreinte)
+    # plusieurs passages par jour : on cumule, sans doublon (même page, même empreinte).
+    # On distingue ce que ce passage a trouvé de ce que la journée contient déjà, sinon un
+    # journal d'exécution ne dit pas si le réveil du jour a servi à quelque chose.
+    nouveaux = len(resume["a_qualifier"])
     ancien = charger(dossier / "evenements.json", {}) if (dossier / "evenements.json").exists() else {}
     if ancien.get("a_qualifier"):
         vus = {(e["url"], e["empreinte"]) for e in resume["a_qualifier"]}
         for e in ancien["a_qualifier"]:
             if (e["url"], e["empreinte"]) not in vus:
                 resume["a_qualifier"].append(e)
-        resume["evenements"] = len(resume["a_qualifier"])
+    resume["evenements"] = nouveaux
+    resume["evenements_du_jour"] = len(resume["a_qualifier"])
     ecrire_atomique(dossier / "evenements.json", resume)
     ecrire_atomique(args.state, etat)
 
@@ -189,9 +202,10 @@ def main():
                        f"- irréversibilité proposée : {e['poids_irreversibilite']}/3",
                        f"- spécificité proposée : {e['specificite_proposee']}/3",
                        "- impact : à qualifier (quelle décision nommée change ?)", ""]
-        (dossier / "brief-squelette.md").write_text("\n".join(lignes), encoding="utf-8")
+        ecrire_texte_atomique(dossier / "brief-squelette.md", "\n".join(lignes))
 
-    print(json.dumps({k: resume[k] for k in ("date", "sources_verifiees", "evenements", "echecs")},
+    print(json.dumps({k: resume[k] for k in ("date", "sources_verifiees", "evenements",
+                                             "evenements_du_jour", "echecs")},
                      ensure_ascii=False))
     # 2 seulement si toutes les sources tombent : une source cassée est un signal, pas une panne
     return 2 if echecs and echecs >= resume["sources_verifiees"] else 0
