@@ -1,6 +1,6 @@
 ---
 name: veille-concurrentielle
-version: 1.1.0
+version: 1.1.1
 description: >
   Qualifier et mesurer une veille concurrentielle B2B : transformer des changements relevés
   sur des sources publiques en signaux notés, en briefs datés et en indicateurs de contribution.
@@ -37,6 +37,31 @@ Trois livrables, jamais autre chose :
    neuf, sourcé et daté, et la décision qu'il change. Le silence est un brief valide.
 2. **Une alerte** de cinq lignes, réservée aux signaux qui atteignent sept sur neuf.
 3. **Un tableau de bord** à six indicateurs, une fois par mois, qui dit où la chaîne casse.
+
+## Ajouter une source
+
+Le registre des sources est porté par la configuration de la collecte, et nulle part ailleurs.
+
+```bash
+python3 boucle.py --config config.json --ajouter-source \
+    --concurrent "Concurrent A" --famille tarifs \
+    --url https://exemple.fr/tarifs --proprietaire pricing
+```
+
+La commande refuse une famille inconnue, une URL sans schéma http et une source déjà présente,
+puis écrit de façon atomique. Elle crée le concurrent s'il n'existe pas encore.
+
+En conversation, l'agent peut proposer l'ajout, mais il passe par cette même commande : une
+source citée dans un fil de discussion et jamais écrite n'existe pas, et sans propriétaire
+personne ne verra qu'elle a disparu. Pour un lot de sources, l'édition directe du fichier est
+légitime ; la forme courte, une simple URL, vaut source critique rattachée au propriétaire du
+concurrent.
+
+Relire le registre sans rien ressaisir :
+
+```bash
+python3 boucle.py --config config.json --registre
+```
 
 ## Les quatre modes
 
