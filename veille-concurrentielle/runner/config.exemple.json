@@ -1,0 +1,31 @@
+{
+  "concurrents": [
+    {
+      "nom": "Concurrent A",
+      "priorite": "cible",
+      "proprietaire": "avant-vente",
+      "note": "surveiller le milieu de gamme et les integrations",
+      "sources": {
+        "tarifs": ["https://exemple.fr/tarifs"],
+        "produit": ["https://exemple.fr/nouveautes"],
+        "recrutement": ["https://exemple.fr/carrieres"],
+        "communique": ["https://exemple.fr/presse"]
+      }
+    },
+    {
+      "nom": "Concurrent B",
+      "priorite": "surveille",
+      "proprietaire": "marketing produit",
+      "note": "verifier les depots de brevets une fois par mois",
+      "sources": {
+        "tarifs": ["https://exemple-b.fr/pricing"],
+        "avis": ["https://exemple-b.fr/avis"]
+      }
+    }
+  ],
+  "reglages": {
+    "pause_secondes": 1.0,
+    "delai_max_secondes": 20,
+    "seuil_echecs_source_degradee": 3
+  }
+}

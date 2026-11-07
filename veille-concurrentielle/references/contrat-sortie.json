@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "objet": "Contrat de sortie de la skill veille-concurrentielle. Un agent qui produit une sortie non conforme est en defaut, pas en variation.",
+  "signal": {
+    "obligatoire": ["id", "concurrent", "famille", "url", "releve_le", "empreinte", "score", "criteres", "impacte_decision", "decision"],
+    "id": "sha256(url + empreinte), tronque a 16 caracteres",
+    "criteres": {
+      "irreversibilite": {"type": "entier", "min": 1, "max": 3},
+      "specificite": {"type": "entier", "min": 1, "max": 3},
+      "impact": {"type": "entier", "min": 1, "max": 3}
+    },
+    "score": "somme des trois criteres, entier de 3 a 9",
+    "impacte_decision": "nom d'une decision reelle : offre, prix, ciblage, discours, aucune",
+    "decision": {"enum": ["publier", "verifier", "archiver"]},
+    "hypothese": "chaine, vide si aucune. Toute inference non observee va ici, jamais dans le fait.",
+    "proprietaire": "fonction responsable de la decision, pas un nom de personne si anonymisation active"
+  },
+  "seuils": {
+    "publier_et_alerter": {"score_min": 7},
+    "verifier": {"score_min": 4, "score_max": 6, "delai_heures": 48},
+    "archiver": {"score_max": 3}
+  },
+  "rejets_automatiques": [
+    "signal sans url",
+    "signal sans date de releve",
+    "signal sans empreinte",
+    "score hors de l'intervalle 3 a 9",
+    "decision publier avec un score inferieur a 7",
+    "fait enonce sans source rattachable"
+  ],
+  "brief": {
+    "obligatoire": ["semaine", "periode", "pages_verifiees", "signaux", "etat_dispositif"],
+    "signaux_max": 3,
+    "silence_explicite": {
+      "condition": "aucun signal de score superieur ou egal a 4",
+      "texte_attendu": "aucun signal au-dessus de 4 sur 9 cette semaine, avec le nombre de pages verifiees"
+    },
+    "etat_dispositif": ["couverture", "delai_detection_median", "bruit", "sources_degradees"]
+  },
+  "alerte": {
+    "obligatoire": ["fait", "preuve_url", "preuve_date", "score", "decision_concernee", "echeance"],
+    "lignes_max": 5
+  },
+  "evenements_de_collecte": {
+    "types": ["nouvelle_source", "changement", "source_degradee"],
+    "source_degradee": {
+      "declencheur": "trois echecs consecutifs sur une meme url",
+      "obligation": "remonter l'evenement, sinon le taux de couverture surestime la surveillance reelle"
+    }
+  },
+  "interdits": [
+    "notifier un client, un prospect ou un partenaire",
+    "ecrire dans un crm ou un outil de suivi client sans validation humaine",
+    "publier deux fois le meme identifiant de signal",
+    "presenter une hypothese comme un fait observe"
+  ]
+}
