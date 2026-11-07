@@ -35,6 +35,50 @@ Codes de sortie : 0 en marche normale, y compris avec des sources cassées, 2 se
 toutes les sources tombent. Une source cassée est un signal à remonter, pas une panne de la
 boucle : un ordonnanceur qui alerte à chaque échec finit ignoré.
 
+## Ajouter une source
+
+Trois portes, une seule qui contrôle.
+
+Par la commande, et c'est le chemin recommandé, parce qu'elle refuse ce qui doit être refusé :
+
+```bash
+python3 boucle.py --config config.json --ajouter-source \
+    --concurrent "Concurrent A" --famille tarifs \
+    --url https://exemple.fr/tarifs --proprietaire pricing
+```
+
+Elle vérifie que la famille existe, que l'URL commence par http, que la source n'est pas déjà
+présente ailleurs dans le registre, et elle crée le concurrent s'il n'existe pas encore. Elle
+écrit la configuration de façon atomique et renvoie un code non nul en cas de refus.
+
+Par la conversation, quand l'agent a accès au fichier : c'est acceptable pour une source
+ajoutée en passant, à condition que l'agent passe ensuite par la même commande. Une URL ajoutée
+à la main dans une conversation et jamais écrite nulle part n'existe pas.
+
+Par l'édition directe du fichier, pour un lot de sources ou une reprise de registre. La forme
+courte, une simple URL, suffit : la source est alors réputée critique et rattachée au
+propriétaire du concurrent. La forme longue porte un propriétaire et une criticité explicites.
+
+```json
+{
+  "nom": "Concurrent A",
+  "proprietaire": "avant-vente",
+  "sources": {
+    "tarifs": [{"url": "https://exemple.fr/tarifs", "proprietaire": "pricing", "critique": true}],
+    "produit": ["https://exemple.fr/nouveautes"]
+  }
+}
+```
+
+Le registre se relit sans rien tenir à la main :
+
+```bash
+python3 boucle.py --config config.json --registre
+```
+
+Il affiche concurrent, famille, source, propriétaire et criticité. C'est cette liste unique qui
+alimente la collecte et le taux de couverture, et non une seconde liste tenue dans un tableur.
+
 ## Configuration
 
 Copier `config.exemple.json`, remplacer les concurrents et les URL. Les clés utiles :

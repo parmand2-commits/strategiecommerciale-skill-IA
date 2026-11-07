@@ -6,8 +6,13 @@
       "proprietaire": "avant-vente",
       "note": "surveiller le milieu de gamme et les integrations",
       "sources": {
-        "tarifs": ["https://exemple.fr/tarifs"],
-        "produit": ["https://exemple.fr/nouveautes"],
+        "tarifs": [
+          {"url": "https://exemple.fr/tarifs", "proprietaire": "pricing", "critique": true}
+        ],
+        "produit": [
+          {"url": "https://exemple.fr/nouveautes", "proprietaire": "avant-vente", "critique": true},
+          {"url": "https://exemple.fr/statut", "critique": false}
+        ],
         "recrutement": ["https://exemple.fr/carrieres"],
         "communique": ["https://exemple.fr/presse"]
       }

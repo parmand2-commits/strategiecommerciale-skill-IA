@@ -1,6 +1,6 @@
 ---
 name: veille-concurrentielle
-version: 1.0.1
+version: 1.1.0
 description: >
   Qualifier et mesurer une veille concurrentielle B2B : transformer des changements relevés
   sur des sources publiques en signaux notés, en briefs datés et en indicateurs de contribution.
@@ -119,6 +119,11 @@ Le schéma complet est dans `references/contrat-sortie.json`. Trois règles de f
 du texte utile, comparer avec l'état de la veille, cumuler les passages de la journée, repérer
 les sources cassées, écrire le dossier de faits et un squelette de brief. Il ne note pas, il ne
 rédige pas, il ne décide pas. L'agent reprend ensuite la qualification.
+
+Le registre des sources vit dans cette configuration, et nulle part ailleurs : la commande
+`--ajouter-source` contrôle la famille, l'URL et les doublons avant d'écrire, et la commande
+`--registre` affiche la liste avec les propriétaires et la criticité. Le taux de couverture se
+calcule sur les sources déclarées critiques, ce qui suppose qu'elles le soient.
 
 Configuration : `runner/config.exemple.json`. Trois entrées d'ordonnancement suffisent :
 quotidien tôt, brief hebdomadaire, tableau de bord mensuel. Une surveillance horaire ne se

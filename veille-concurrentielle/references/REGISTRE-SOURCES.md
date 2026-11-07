@@ -16,25 +16,54 @@ personnes. Sans lui, le taux de couverture est une impression ; avec lui, c'est 
 | Partenariats et intégrations | écosystème, canaux, dépendances | exclusivités réelles | haute | hebdomadaire |
 | Salons et événements | cibles déclarées, discours public | ce qui se dit hors scène | moyenne | événementielle |
 
-## Cadre de saisie
+## Où vit le registre
 
-Pour chaque concurrent suivi :
+Une seule liste, jamais deux. Le registre est porté par la configuration de la collecte
+(`runner/config.json`), et se relit sans ressaisie :
 
+```bash
+python3 boucle.py --config config.json --registre
 ```
-concurrent: <nom>
-priorite: cible | surveille | ignore
-proprietaire: <fonction>
-sources:
-  tarifs: [<url>, <url>]
-  produit: [<url>]
-  recrutement: [<url>]
-  communique: [<url>]
-  avis: [<url>]
-  brevets: [<url>]
-  partenariat: [<url>]
-  salon: [<url>]
-note: <ce que l'on cherche en priorité chez ce concurrent>
+
+Cette commande affiche concurrent, famille, source, propriétaire et criticité. C'est cette
+liste qui alimente la collecte et le taux de couverture. Un registre tenu à part dans un
+tableur dérive toujours, et la dérive n'est visible qu'au moment où la couverture baisse.
+
+Pour ajouter une source, la commande contrôle avant d'écrire :
+
+```bash
+python3 boucle.py --config config.json --ajouter-source \
+    --concurrent "Concurrent A" --famille tarifs \
+    --url https://exemple.fr/tarifs --proprietaire pricing
 ```
+
+Elle refuse une famille inconnue, une URL sans schéma http, et une source déjà présente. Une
+source ajoutée de vive voix dans une conversation doit passer par la même commande : ce qui
+n'est pas écrit n'existe pas.
+
+Forme de la configuration, pour un ajout par lot :
+
+```json
+{
+  "concurrents": [
+    {
+      "nom": "Concurrent A",
+      "priorite": "cible",
+      "proprietaire": "avant-vente",
+      "note": "surveiller le milieu de gamme et les intégrations",
+      "sources": {
+        "tarifs": [{"url": "https://exemple.fr/tarifs", "proprietaire": "pricing", "critique": true}],
+        "produit": ["https://exemple.fr/nouveautes"]
+      }
+    }
+  ]
+}
+```
+
+Une source écrite en forme courte, une simple URL, est réputée critique et rattachée au
+propriétaire du concurrent. La forme longue sert aux cas où le propriétaire ou la criticité
+diffèrent, ce qui est fréquent : une page tarifaire appartient au pricing, une page produit à
+l'avant-vente.
 
 ## Règles de tenue
 
