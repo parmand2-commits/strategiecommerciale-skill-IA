@@ -1,21 +1,16 @@
 ---
 name: veille-concurrentielle
-version: 1.1.1
+version: 1.1.2
 description: >
-  Qualifier et mesurer une veille concurrentielle B2B : transformer des changements relevés
-  sur des sources publiques en signaux notés, en briefs datés et en indicateurs de contribution.
-  Quatre modes : boucle quotidienne de collecte et de qualification, brief hebdomadaire, revue
-  de perte en cinq questions, installation du registre de sources et du tableau de bord à six
-  indicateurs. Le livrable est un brief d'une page où chaque signal porte son score sur neuf,
-  sa source datée et la décision qu'il change. Un signal sans source datée est rejeté.
-  Déclencheurs : "veille concurrentielle", "intelligence concurrentielle", "qualifier un
-  signal", "brief concurrentiel", "taux de surprise", "revue de perte", "un concurrent a changé
-  ses prix", "agent de veille".
-  Inspiré de l'article « Veille concurrentielle : mesurer ce que la cellule apporte vraiment »,
-  qui applique au renseignement concurrentiel le chapitre 3 de Sun Tzu : mesurer la connaissance
-  de l'autre, pas l'issue de la bataille.
-  Compatible avec tout agent (ChatGPT, Gemini, Perplexity, Copilot) : sans système de skills,
-  copier INSTRUCTIONS.md comme prompt système.
+  Qualifier et mesurer une veille concurrentielle B2B : transformer des changements relevés sur
+  des sources publiques en signaux notés sur neuf, en briefs datés et en indicateurs de
+  contribution. Quatre modes : boucle quotidienne, brief hebdomadaire, revue de perte,
+  installation du registre de sources. Le livrable est un brief d'une page où chaque signal
+  porte son score, sa source datée et la décision qu'il change ; un signal sans URL datée est
+  rejeté. Déclencheurs : "veille concurrentielle", "qualifier un signal", "taux de surprise",
+  "revue de perte", "un concurrent a changé ses prix". Inspiré de l'article « Veille
+  concurrentielle : mesurer ce que la cellule apporte vraiment ». Compatible avec tout agent :
+  sans système de skills, copier INSTRUCTIONS.md comme prompt système.
 ---
 
 # Veille concurrentielle
