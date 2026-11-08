@@ -1,0 +1,27 @@
+name: Vérifier les skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verifier:
+    name: Règles de la maison
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Contrôler l'arborescence et les règles éditoriales
+        run: python3 .github/scripts/verifier_skills.py
+
+      - name: Résumé en cas d'échec
+        if: failure()
+        run: |
+          echo "### Contrôle refusé" >> $GITHUB_STEP_SUMMARY
+          echo "Une règle de la maison n'est pas respectée. Le détail est dans le journal de l'étape précédente." >> $GITHUB_STEP_SUMMARY
