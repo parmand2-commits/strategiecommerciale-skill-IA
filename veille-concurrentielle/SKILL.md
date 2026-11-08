@@ -1,6 +1,6 @@
 ---
 name: veille-concurrentielle
-version: 1.1.2
+version: 1.2.0
 description: >
   Qualifier et mesurer une veille concurrentielle B2B : transformer des changements relevés sur
   des sources publiques en signaux notés sur neuf, en briefs datés et en indicateurs de
@@ -84,6 +84,17 @@ fonctionne sans collecte : il travaille sur les comptes rendus et sur les commer
 Construit le registre de sources, fixe les seuils, choisit les destinataires, et pose le
 tableau de bord. À faire une fois, à réviser une fois par trimestre.
 
+Deux entrées sont obligatoires, et l'installation s'arrête sans elles :
+
+- **la liste des décisions réelles** de l'entreprise (remises et conditions, ciblage, fiches
+  et objections, positionnement, arrivée d'un concurrent), parce que le critère d'impact se
+  juge contre cette liste et contre rien d'autre ;
+- **le propriétaire de chaque source**, parce qu'une source sans propriétaire est une source
+  abandonnée que personne ne verra disparaître.
+
+Sans liste des décisions, l'impact se note 1 et tous les signaux finissent archivés. C'est le
+comportement voulu : mieux vaut un brief vide qu'un brief qui invente son impact.
+
 ## La chaîne du renseignement en cinq étages
 
 | Étage | Ce que la veille produit | Indicateur |
@@ -157,6 +168,7 @@ justifie que sur trois à cinq URL pendant une fenêtre de lancement.
   qu'elles ne révèlent pas, leur fiabilité, leur cadence.
 - `references/REVUE-PERTE.md` : les cinq questions, le codage, le calcul du taux de surprise.
 - `references/INDICATEURS.md` : les six indicateurs, formule, source de donnée, seuil, piège.
+- `references/FORMAT.md` : quel format pour quel livrable, et les spécifications d'export.
 - `references/contrat-sortie.json` : le schéma machine des sorties et les seuils de décision.
 - `runner/README.md` : la boucle automatisée, sa configuration et son ordonnancement.
 - `examples/BRIEF-EXEMPLE.md` : une sortie complète, cas réel composite.

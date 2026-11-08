@@ -17,6 +17,11 @@ sont pas des benchmarks sectoriels, et ils ne doivent jamais être présentés c
 **Couverture** : le registre est-il tenu, et sur les bonnes cibles ? Une couverture à 90 pour
 cent sur des sources secondaires ne vaut pas 60 pour cent sur les sources primaires.
 
+Attention au seuil sur un petit registre : à 90 pour cent, quatre sources critiques ne tolèrent
+aucune panne, puisque quatre sources actives sur quatre déclarées font 100 ou 75. Sous dix
+sources critiques, fixez l'objectif à 100 pour cent et lisez l'indicateur en absolu, source par
+source : « les quatre sont passées », plutôt qu'en pourcentage.
+
 **Délai** : le dispositif est-il assez rapide ? C'est le seul indicateur que l'automatisation
 fait bouger de façon spectaculaire, et c'est donc celui qui justifie le premier l'investissement.
 
